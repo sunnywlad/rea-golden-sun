@@ -1,0 +1,328 @@
+{
+  "step": 29,
+  "rom_sha1": "5c4695205413df7db52b9a184815a07783999971",
+  "alchemy_commit": "1517ff0750d988f570b6efcd06bf30d0f64c9d2a",
+  "ghidra_started": false,
+  "ghidra_mutated": false,
+  "sources_sha256": {
+    "scripts/audit_sprite_decode.py": "643fe30866dea3bb43b895f3fafe73ef4988ceb3bd469d1f67f61f770ea6fa6e",
+    "scripts/audit_sprite_upload.py": "5d09e713090d0f86f416f2048dda6e23fd662fead4bd7fff911968676d21c60f",
+    "external/alchemy/games/tbs/src/field/field.c": "a1592ad695abf985b6fcfc1505281e5e60dd194b7ba6763d3b99a1a834c6b37f",
+    "external/alchemy/games/tbs/src/graphics/tile/convert_map.s": "bace7aeb8b77be8f5600a1172bff74f59621df8405ae9e0106eed16f747a778c",
+    "work/repo/rom_9000/src/rom_a97c.s": "7c2df6cbebbaf4259e83940ce85e2dacbcdb0d3b28f0cbf1ab2d578f95f2f99c",
+    "work/repo/rom_9000/src/rom_92b8.s": "71f93cda6af70e5d08dadc541a38e9365f4becfd4489e34f2479483147347da8",
+    "work/repo/rom_9000/src/rom_b798.s": "9803e48cf8d8a966a4134ab1dcee244c62d56d08e90d439cc0f9788f54ce8f1d",
+    "work/repo/rom_9000/src/rom_b074.s": "b99063df66c69a01b4b09a882721d25d93cb89389a5c22a927b5e81554e60139",
+    "work/repo/rom_c0/src/rom_45e8.s": "f1a118edfab26082928b9df3c00dff0dcc2b84013d90a8e2817ffd94db795723",
+    "work/repo/rom_c0/src/rom_3e58.s": "65f728217a26bb1a42dd9287b010a5c6c968cc6bf5f54879d4de288078f2dce5",
+    "work/repo/rom_c0/src/rom_3d04.s": "42c41ecc0c703eb847235536aeaf617c5b7c8122e140a002c990da6eb1164013",
+    "work/repo/rom_c0/src/rom_1b70.s": "b44d63421b3600e6889668f3de66d0c88b5a2031df1c147dd9e41ace7fc1aab0",
+    "work/repo/rom_c0/src/rom_3650.s": "888e422ed9290867b2eb0b861d95967f2e76de4651eacd52db03d0123f1315f0"
+  },
+  "initialization": {
+    "uploader_slot": 53,
+    "uploader_ram": "0x2024000",
+    "uploader_rom": "0x0800a418",
+    "uploader_bytes": 124,
+    "uploader_sha256": "f2280c69b06f029cd10a775b5c9a9a4f40d630b730e30734d370174b35bf964e",
+    "palette_source": "0x0800779c",
+    "palette_destination": "0x05000200",
+    "palette_entries": 224,
+    "palette_sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e",
+    "palette_224_to_255_preserved": true,
+    "dma": [
+      {
+        "source": "0x800779c",
+        "destination": "0x5000200",
+        "control": "0x800000e0",
+        "bytes": 448,
+        "sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e"
+      },
+      {
+        "source": "0x3007eec",
+        "destination": "0x2020000",
+        "control": "0x85000380",
+        "bytes": 3584,
+        "sha256": "6cf1b57d59e7111bc218dfb01dda93ac0f776715599a1c69f89035bd20c16a10"
+      },
+      {
+        "source": "0x3007eec",
+        "destination": "0x2022000",
+        "control": "0x85000180",
+        "bytes": 1536,
+        "sha256": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca"
+      },
+      {
+        "source": "0x8012f20",
+        "destination": "0x6010040",
+        "control": "0x84000020",
+        "bytes": 128,
+        "sha256": "8e6bf379f095385822595834f73f51e59ad460274cff55bdffaf779b672d0673"
+      },
+      {
+        "source": "0x800a418",
+        "destination": "0x2024000",
+        "control": "0x8400001f",
+        "bytes": 124,
+        "sha256": "f2280c69b06f029cd10a775b5c9a9a4f40d630b730e30734d370174b35bf964e"
+      }
+    ]
+  },
+  "uploader_synthetic_witnesses": [
+    {
+      "width": 8,
+      "height": 8,
+      "bytes": 64,
+      "input_sha256": "3f44f841abb66aa43a1c180b6a3bdd13bc483563773f30172414b1f772dd49ec",
+      "tiles_sha256": "3f44f841abb66aa43a1c180b6a3bdd13bc483563773f30172414b1f772dd49ec"
+    },
+    {
+      "width": 16,
+      "height": 8,
+      "bytes": 128,
+      "input_sha256": "3ee917c8af1347ae3136fd94bfb1ec59f536479d5a9bf7213f31b818b65fa978",
+      "tiles_sha256": "b4882f9e51cdc68f0a362c3a20a00f5e440fe93924a8d3290905ad5f410d65e5"
+    },
+    {
+      "width": 8,
+      "height": 16,
+      "bytes": 128,
+      "input_sha256": "be4dba638a21725f64c65269111222f7fb722081ea0f661085b7b83837ef3276",
+      "tiles_sha256": "be4dba638a21725f64c65269111222f7fb722081ea0f661085b7b83837ef3276"
+    },
+    {
+      "width": 16,
+      "height": 16,
+      "bytes": 256,
+      "input_sha256": "39a083f25b6a6368dccab311dc5d00a500277ec0ad8cca561eba7456cbfbdad6",
+      "tiles_sha256": "5ebde36dab3ae60d8bd7b0dc9cf8ee24b488a48c47e16e138e7fd744a589591b"
+    },
+    {
+      "width": 32,
+      "height": 32,
+      "bytes": 1024,
+      "input_sha256": "75aa73575f04c3f4336f7e219a9b29775366dc138e220190abe217ffc4253e27",
+      "tiles_sha256": "6ccf1499c616a09c931f5016f9d082a3dd6915973afc85849d2a2a0d1f9ada80"
+    },
+    {
+      "width": 64,
+      "height": 32,
+      "bytes": 2048,
+      "input_sha256": "7821d1297671b4673f7ba1b001218c2c7e6ebd855031444cc07c4eee053cb76c",
+      "tiles_sha256": "2583369f4635ea5461e4ebcb788b46ae281df3430428b29910c58ab788e7aaa0"
+    },
+    {
+      "width": 32,
+      "height": 64,
+      "bytes": 2048,
+      "input_sha256": "6ee11ae6d1e3b2af3c1d46f4f6ce39edcc17b9ba7c920900a9420f403cc21df6",
+      "tiles_sha256": "0d31630ec6fb82f740de6210c50c7860f8e99d92ed2a533f98f88b74888bc4c2"
+    },
+    {
+      "width": 64,
+      "height": 64,
+      "bytes": 4096,
+      "input_sha256": "adf78ec42493b80b292b44c633c718ad242a746e0166f2fe6885d904ff38004e",
+      "tiles_sha256": "a3db9c92169b59b51ed457e502d02375774383091de5cb14242f4ac7822791e4"
+    }
+  ],
+  "native_compositions": [
+    {
+      "heading": "0x0",
+      "mode": 0,
+      "frame": 1,
+      "tile": 6,
+      "destination": "0x60100c0",
+      "bytes": 1024,
+      "pixels_sha256": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "tiles_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "native_vram_store_count": 256,
+      "upload_args": [
+        "0x2018000",
+        "0x20",
+        "0x20",
+        "0x60100c0"
+      ],
+      "dirty_after": 0,
+      "freed_pixel_buffer": true,
+      "attr2": "0x806",
+      "ldm_shims": 74,
+      "mirror_return": 0
+    },
+    {
+      "heading": "0x8000",
+      "mode": 0,
+      "frame": 1,
+      "tile": 6,
+      "destination": "0x60100c0",
+      "bytes": 1024,
+      "pixels_sha256": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "tiles_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "native_vram_store_count": 256,
+      "upload_args": [
+        "0x2018000",
+        "0x20",
+        "0x20",
+        "0x60100c0"
+      ],
+      "dirty_after": 0,
+      "freed_pixel_buffer": true,
+      "attr2": "0x806",
+      "ldm_shims": 74,
+      "mirror_return": 1
+    }
+  ],
+  "native_placement_and_oam": [
+    {
+      "heading": "0x0",
+      "position_pixels": [
+        144,
+        0,
+        96,
+        0
+      ],
+      "scale_q16": [
+        65536,
+        65536
+      ],
+      "sprite_top_left": [
+        128,
+        66
+      ],
+      "oam_attributes": [
+        "0x2042",
+        "0x8080",
+        "0x806"
+      ],
+      "affine_matrix_count": 0,
+      "matrix_q8": null,
+      "matrix_copied_to_oam": false,
+      "oam_destination": "0x07000000",
+      "oam_shadow": "0x2013000",
+      "oam_dma": {
+        "source": "0x2013000",
+        "destination": "0x7000000",
+        "control": "0x84000100",
+        "bytes": 1024,
+        "sha256": "805e2f8303b00d79ba72b0186bbf75f373a1e2b48c99ad0821608ba211df78ba"
+      },
+      "no_oam_dma_for_flags": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "oam_builder_executed_from_ram": true,
+      "oam_builder_sha256": "afb8cd3cd59e70001a4dd11a4740d89272283edd2bf0e7c00cdec2f85a3f17d1",
+      "native_entries_observed": [
+        "0x8004838",
+        "0x8003fa4",
+        "0x8003fa4",
+        "0x8003dec"
+      ],
+      "vblank_slice": [
+        "0x08003686",
+        "0x080036a8"
+      ],
+      "complete_vblank_executed": false
+    },
+    {
+      "heading": "0x8000",
+      "position_pixels": [
+        144,
+        0,
+        96,
+        0
+      ],
+      "scale_q16": [
+        65536,
+        65536
+      ],
+      "sprite_top_left": [
+        128,
+        66
+      ],
+      "oam_attributes": [
+        "0x2142",
+        "0x8080",
+        "0x806"
+      ],
+      "affine_matrix_count": 1,
+      "matrix_q8": [
+        -256,
+        0,
+        0,
+        256
+      ],
+      "matrix_copied_to_oam": true,
+      "oam_destination": "0x07000000",
+      "oam_shadow": "0x2013000",
+      "oam_dma": {
+        "source": "0x2013000",
+        "destination": "0x7000000",
+        "control": "0x84000100",
+        "bytes": 1024,
+        "sha256": "e5ac83f2876490c1a505b7ae82731509557912f559f8672970ecfc8be9a28c95"
+      },
+      "no_oam_dma_for_flags": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "oam_builder_executed_from_ram": true,
+      "oam_builder_sha256": "afb8cd3cd59e70001a4dd11a4740d89272283edd2bf0e7c00cdec2f85a3f17d1",
+      "native_entries_observed": [
+        "0x8004838",
+        "0x8003fa4",
+        "0x8003fa4",
+        "0x8003dec"
+      ],
+      "vblank_slice": [
+        "0x08003686",
+        "0x080036a8"
+      ],
+      "complete_vblank_executed": false
+    }
+  ],
+  "frame1_palette_lookup": {
+    "frame": 1,
+    "mode": 0,
+    "nonzero_pixels": 258,
+    "distinct_nonzero_indices": 42,
+    "distinct_colors": 42,
+    "min_nonzero_index": 10,
+    "max_nonzero_index": 222,
+    "all_nonzero_indices_in_loaded_palette": true,
+    "analytical_rgba_sha256": "aad3b1161c9358b34b4895203531f9ccce9e05d554cd0a8cba77dd7c42316a12",
+    "rgb_expansion": "floor(channel5 * 255 / 31)",
+    "alpha_rule": "index zero transparent, other indices opaque",
+    "ppu_color_blending_emulated": false
+  },
+  "same_frame_direction_change_avoids_reupload": true,
+  "limits": [
+    "Isolated ROM execution, no complete game or display emulation",
+    "Synthetic object, layer, heap, cache state and decoder slot",
+    "Immediate DMA3 simulated by explicit memory transfers",
+    "Three inherited unaligned decoder LDM corrections",
+    "Only an OAM gate/DMA slice of VBlank is executed",
+    "DISPCNT, PPU mapping, blending and scanout are not executed",
+    "No framebuffer, screenshot or extracted payload output"
+  ]
+}

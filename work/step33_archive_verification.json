@@ -1,0 +1,233 @@
+{
+  "archive": "work/archives/step33/projects.tar.gz",
+  "archive_bytes": 487402572,
+  "archive_sha256": "5a6bfdca75c13eb506592ac19ba8ff7ba765c992f974ae87a4c34ab8a4d4c673",
+  "manifest_sha256": "3f6e280f842201878566ec0582584f42fc8a6a6f4d45b57f90a81df52626e616",
+  "net_project_bytes_freed": 922468352,
+  "projects": [
+    {
+      "entries": 16,
+      "file_bytes": 50840558,
+      "name": "ghidra",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 17,
+      "file_bytes": 50840583,
+      "name": "ghidra_baseline",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51004398,
+      "name": "ghidra_decoded23",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51004398,
+      "name": "ghidra_func9bb8",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 50988014,
+      "name": "ghidra_shared_annotated",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 50988014,
+      "name": "ghidra_shared_split",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 50840558,
+      "name": "ghidra_step9_final",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 50988014,
+      "name": "ghidra_step9_saved",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51364846,
+      "name": "ghidra_thumb_alias",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51119086,
+      "name": "ghidra_thumb_analyzed",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51037166,
+      "name": "ghidra_thumb_arm_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53511150,
+      "name": "ghidra_thumb_call_via_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53511150,
+      "name": "ghidra_thumb_call_via_scoped",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53527534,
+      "name": "ghidra_thumb_inline_pilot_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53527534,
+      "name": "ghidra_thumb_inline_pilot_scoped",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 55673838,
+      "name": "ghidra_thumb_inline_remaining_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 55657454,
+      "name": "ghidra_thumb_inline_remaining_scoped",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53281774,
+      "name": "ghidra_thumb_literal_large_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 53281774,
+      "name": "ghidra_thumb_literal_large_scoped",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 52003822,
+      "name": "ghidra_thumb_literal_medium",
+      "role": "historical project",
+      "status": "rejected",
+      "status_basis": "work/step21_attempt.md"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 52003822,
+      "name": "ghidra_thumb_literal_medium_scoped",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51364846,
+      "name": "ghidra_thumb_literal_pilot",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51299310,
+      "name": "ghidra_thumb_long",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51037166,
+      "name": "ghidra_thumb_pilot",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51037166,
+      "name": "ghidra_thumb_return_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 51119086,
+      "name": "ghidra_thumb_small",
+      "role": "historical project",
+      "status": "replaced",
+      "status_basis": "RUN_STATE.md: sole currently retained project"
+    },
+    {
+      "entries": 16,
+      "file_bytes": 55804910,
+      "name": "ghidra_thumb_special_pair_probe",
+      "role": "unpromoted experiment",
+      "status": "replaced",
+      "status_basis": "work/step26.md"
+    }
+  ],
+  "protected_json_count": 414,
+  "prune_receipt_sha256": "9d71674f15faa662925b5cd7017ee6f0245716d8a4b2ee8fd91458f9b2a6a9b9",
+  "retained_entries": 16,
+  "retained_file_bytes": 55788526,
+  "retained_project": "work/ghidra_thumb_special_pair_scoped",
+  "schema": 1,
+  "source_allocated_bytes": 1409875968,
+  "source_file_bytes": 1408657971
+}

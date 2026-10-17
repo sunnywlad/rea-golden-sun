@@ -1,0 +1,688 @@
+{
+  "step": 32,
+  "method": "Static source and Git-object audit; no JS/Phaser/ROM execution",
+  "repository": {
+    "origin": "https://github.com/jjppof/goldensun_html5.git",
+    "commit": "b8b086dc4a15025778acd1ce861c4ef7d6fda426",
+    "branch": "master",
+    "shallow": true,
+    "filter": "blob:none",
+    "sparse_paths": [
+      "/LICENSE.txt",
+      "/README.md",
+      "/package.json",
+      "/tsconfig.json",
+      "/base/",
+      "/types/",
+      "/assets/filters/",
+      "/.gitattributes",
+      "/.gitignore"
+    ],
+    "clean": true,
+    "tracked_tree_entries": 626,
+    "present_tracked_blobs": 259,
+    "missing_tracked_blobs": 367,
+    "forbidden_present_blobs": [],
+    "rule_files": []
+  },
+  "source_manifest_sha256": {
+    ".gitattributes": "40a520ce403db71ae678c91f7a4d85c59a7dc05f7c71bf58c1bcb9dd17c83a23",
+    ".gitignore": "a109a64048fb5e537f56b421156467b5428d95491726907870b2a9191fb1f743",
+    "LICENSE.txt": "2be42d073b1d563c7c2d5b7540dce6be6eb70852abf72545ff4d94594651d3a5",
+    "README.md": "c1d395a5e734564d789d9a78b549448113ce2fa964feb0d4058c27aaf30f7a9c",
+    "assets/filters/BlurX.js": "348714acfb3e5b2c3071115eb0065eb5f2edc86cf09dfa85d0c17eaa1f7bfa4f",
+    "assets/filters/BlurY.js": "deae9aa5d1411dfb1cff92efecf1a246eef23de673247ba021ba3f3ee8c9dfed",
+    "assets/filters/alpha_gray.js": "9ba768213d78bb97999aa299192ef7eb08fa2b1e75c3d75aab59229541d663a9",
+    "assets/filters/color_blend.js": "5fd67e320eb8343089a7c125e0e99bd0ed1f303141a211fa00290439d0218e15",
+    "assets/filters/colorize.js": "f9a3f9c8d1781ec6d62397ca5b68e2d80bffaceb13dde477856dd8fbc1013dd9",
+    "assets/filters/flame.js": "0d04bef61e75767197390103f3b1a5a887a894a25421745b0d6fc83d893402d0",
+    "assets/filters/glow.js": "601f799fc98ea117e36e15b8cef97650cce05bb100cc4c03c468e876175f1674",
+    "assets/filters/gray.js": "2722df189f45761a88b5e374dcb6ef75d27685d41110c9aadeb0d087a6c7e704",
+    "assets/filters/hue.js": "d757f0193d25049d7847307d632407ac780f79aa1ed5029f95cd626ce0fb03a0",
+    "assets/filters/levels.js": "a4757012e7770704eb08fcab5d18a9e98c05681978a01d2d5a56c0a6556ebbe7",
+    "assets/filters/mode7.js": "7110e31e5d0006f21ffd89aa8f2b9585709273655ed5aad6d91ff3b6d12f2b55",
+    "assets/filters/outline.js": "ae40b64588f0b6e017129cf6553771bce8be5dece64ddb10bdac5ad93de4fc9f",
+    "assets/filters/pixel_shift.js": "e53f21dcabfd569397e0cab132b99ac8556842aa175830e7f60069037d98d252",
+    "assets/filters/reveal.js": "2f22829bfa01610392bedbbd33b9a02e005688918a30a286c5fba2213283b006",
+    "assets/filters/tint.js": "5dd6cde9dc9cd340990721602091a669e2d0464b6d01abf784db3b3510afa99a",
+    "assets/filters/watery.js": "484fd52c923b9d55dc17d6c78b54a2cfdeeed9bc949625be91932134f494f79f",
+    "base/Ability.ts": "b59fab0809330eef5055185f52bb746d27d03339a52e9944a0a11cc6598a7ba9",
+    "base/Audio.ts": "7e4fa3d56d938a00dd33528edc34b668c93d43dd3f3eef62fb3628dcac924880",
+    "base/Camera.ts": "4793d8729c08ff4d2028cbb33f463fa5ede6631750c9370a07b8818b91901e3e",
+    "base/Classes.ts": "8a1b7efdf7558e06ac7a1c74d7fc127b505e068c3cd3c7d75fcbe10051c98325",
+    "base/Collision.ts": "3cee61841de20aa45e845966ecf08335d6a26933261cb0e758588601559f4d3c",
+    "base/ControllableChar.ts": "312f632380bb1c8ed63de5554b7f1096e9928f1feec71ef288b61da1ed59345c",
+    "base/Djinn.ts": "3aae2c195b450db8462e518aa2c7e49092acb88d2fdbf0d5d8c0c606cbafa2b6",
+    "base/Effect.ts": "35180a372c048944d3157531fed318dbd19a385852ee0f3543ffdcf2b0db3952",
+    "base/Enemy.ts": "c81f40e9b70e6a762d5c4081267113342bb59a5353d4ab42d85597e9b54d69a0",
+    "base/GoldenSun.ts": "ed0ebe1518675f3ea5a32a7e794218ae18b463d9816390575e7fba188b783774",
+    "base/Hero.ts": "625a7d08841e3bc8d1d58411f487c7c8e7a6776768d91a5f0657aa63f8e5854e",
+    "base/Item.ts": "6fc14a4ebf992e96cb897b72bd44735a448bd379b11c5a48079ee31f76af8e2b",
+    "base/Logger.ts": "4aa309d060293f38ff84561ca54c3df7e5176096641e351f74d237bfc8c8a5da",
+    "base/MainChar.ts": "674242865929230b0fbfe74588b6fec4d82599f85a2c66fc8bc536f950c7c29f",
+    "base/Map.ts": "89b4f0a2ea7e489560ab87638489d6e9595663533bf0fa04927d4f6debec4e8c",
+    "base/NPC.ts": "f8e865b1e55bf014e02b0c3ccef5dd345fdcf063c7731f7d7a58ea2901b0340f",
+    "base/ParticlesWrapper.ts": "e2e0016ef4001a8b1933a882602b0b55bc16b58772c033dfb865190889b2f309",
+    "base/Player.ts": "0d8cc4872655f4f73fda04072a532587ea948b78c94f4f92040bf84ef0d843e3",
+    "base/Snapshot.ts": "91939f4ddf5cae8dffd94fb10e0e4200ef4c5d96d4dfa8dddcedea029ae87ff6",
+    "base/SpriteBase.ts": "358cfb72b3dc3c890f89ab5b4001c0e53ebeef0141a4021d39e6aa9f599147c3",
+    "base/Storage.ts": "3791dc90f4c9f330045f1548fe6480fb75e1be71ea7f38f061606884cf9a231a",
+    "base/Summon.ts": "454efb954f7700bfc9fc22ff146badbe57b3ce808dd1734328c062255fcfc1bb",
+    "base/Window.ts": "df0f3c2ea25f2f9e6bb448e92b73016db890f427e9465d7186827f1a7c96d7ec",
+    "base/XGamepad.ts": "e7fe18babbfaf58e24f6107969d4b3288a0d35058dc14232198b6e62789d40d5",
+    "base/battle/Battle.ts": "9c0ad415c560e37157ed3b6f7d719592806f492d7898f20bb7679e6bc18f7a95",
+    "base/battle/BattleAnimation.ts": "19a00f5167adc63109760a44fa2bb9a802efd638b35a3b4df3af63bbe55d28eb",
+    "base/battle/BattleAnimationManager.ts": "e16c22176dcc13fc5dc10ebb4cb08e02d405b0cd77f36978036bccb2b7bd33c4",
+    "base/battle/BattleAnimationTester.ts": "5a88dbd97479e3c923b65a821fc9e4756a0ce58827007eb766f3d688c949c0cd",
+    "base/battle/BattleBase.ts": "7608db629d00a101baf8020181f2fc138ac470a55d49932a6577e6d88232788d",
+    "base/battle/BattleCursorManager.ts": "715a37242da23aebdc27765708ab68d458e50c95ab9dc45a996a81a0931cc763",
+    "base/battle/BattleFormulas.ts": "2ed27fddb11b5b84b6d06c40a1edc55117c3ad812995c50309c66688b15b7718",
+    "base/battle/BattleLog.ts": "7ff84163ed5f519d7a6be2f166c58fdaa93d712ea511698196e32ef26cd88ea9",
+    "base/battle/BattleStage.ts": "d8ba72000479f86a5ad73d84e29278e72ec4fde917f348abe60832231b9641e9",
+    "base/battle/EnemyAI.ts": "b184afdc79d72493dd354dcb5222e3cee97b828f54ea2f68eddbf1145956bca0",
+    "base/battle/PlayerSprite.ts": "06e41e7006084d73c4f94d35db4332e2c9e404a26fcbbd3f61da9d5033617068",
+    "base/debug/Debug.ts": "ad494ae868b22de669905aac31ed0b75f658dbc8325526d44b535a8f67c0d5a5",
+    "base/field_abilities/AvoidFieldPsynergy.ts": "35c3342982cd0b684b67de6c722ff2a31de001cb51978f0e6462aa7f370072b8",
+    "base/field_abilities/DouseFieldPsynergy.ts": "0ac115d12e7d654838dbe011aec36d87f304836bfc13464f355009aaa191b78d",
+    "base/field_abilities/FieldAbilities.ts": "c05be2bd3931f69c07640be4379322f3d15fc28d34fe92da19eec43901ec0ab4",
+    "base/field_abilities/FrostFieldPsynergy.ts": "030450b46e5ed28a76698eade9b294902f1f81a10719ee5b5d62030fbea8a20c",
+    "base/field_abilities/GrowthFieldPsynergy.ts": "3b52d7b2fb610cd3c9461e20fe2b3a88d636e74ffa8301e40dede9a8d15a2668",
+    "base/field_abilities/LashFieldPsynergy.ts": "f6dc39ece0fdaa438ecd6fad800c8dc33469b4465f707dcc0ea695bb13e45735",
+    "base/field_abilities/LiftFieldPsynergy.ts": "8d7411d976acaa7213e11e95cf60154cac1551c76ed97ae29bc001980b861169",
+    "base/field_abilities/MindReadFieldPsynergy.ts": "7989beb268bc7989328a300940546e4da7340c44b77eda5aecb8fa4fff202213",
+    "base/field_abilities/MoveFieldPsynergy.ts": "ab3953962f424cc2a8319c35ba5c62c14e0a8fcd5c4cbe3c2dc2669408b6bc9d",
+    "base/field_abilities/PoundFieldPsynergy.ts": "633b2e40c57253dc651c1cea0ad98d00e984633673c96c428f8fc452c4e73de3",
+    "base/field_abilities/RetreatFieldPsynergy.ts": "dbea372cd8e8ac7d59339d649beb1670c7fd3d8ba694e0711e918b501ea4a181",
+    "base/field_abilities/RevealFieldPsynergy.ts": "fdc5f4959773c9cac32733774c0112a59f97d55a3089303462444fc424073d9a",
+    "base/field_abilities/SandFieldPsynergy.ts": "070c5f98cc94c8a9fc4542348750c9030f58a639e99c5d7a226baa3ec737703e",
+    "base/field_abilities/Wave.ts": "17f6c19d71889374ba04d076d296f4d86c9675078bdb50758ed639df6695818c",
+    "base/field_abilities/WhirlwindFieldPsynergy.ts": "6d18ba378b0a7acc1c14a4ec152c36260f7155f77c470deaf0cb9d214c614cef",
+    "base/game_events/AddItemToPartyEvent.ts": "9f3fba29c07968143a7f0332425d1dd12d9231a67232980073cd5502d94816a4",
+    "base/game_events/AudioPlayEvent.ts": "80592b214fa200284454d14849480e94a1909a053ee2a840e84a2df4d126bb11",
+    "base/game_events/AudioStopEvent.ts": "94a2dfad4f26336dc952d390338d030eec56c98ce91feff9b368327986a9b34d",
+    "base/game_events/BattleEvent.ts": "90942b722ce10bcbd4f4fd5aba32af8c886ba4cdca00b795696887dadc3009ba",
+    "base/game_events/BranchEvent.ts": "d34efe919df3c9798acdb87b907bfc957ae1e11b8756446c6e298660d4e34203",
+    "base/game_events/CameraFadeEvent.ts": "e49c44b52f05cc96f04751a3a66451e77e0fd8e2aad46afd6749f4946d43244d",
+    "base/game_events/CameraFollowEvent.ts": "b54befb4d017f7e33f1f20f61422d0c25d6a41a7faa9b68f0a0d6414c372fcbf",
+    "base/game_events/CameraMoveEvent.ts": "5eb8d17e26d772d751ecf26368d7e86f5489d1e8397f5b2930a2b2adddfc52fc",
+    "base/game_events/CameraShakeEvent.ts": "2a9961f8b050f2e25d78313d301f15d46a6c36fe4038436afc983a4bd63a5895",
+    "base/game_events/CastingAuraEvent.ts": "6e615a664e4189925d1dbdfd585a043502665ae0d2e527433e893e76dd838718",
+    "base/game_events/ChangeCollisionLayerEvent.ts": "c931fa8cc01cefa1651b6c58291472866184b86d135519df92e470e426ab67d7",
+    "base/game_events/CharAnimPlayEvent.ts": "11a7bbef6a6b3d1514975a3062a56e23b63f93051b05a050494ae7f62e751999",
+    "base/game_events/CharBlendModeEvent.ts": "b6efc55a08b4911ad58bb233d2d3e1c7ca82a16d4b721094f1be169e3e2aa352",
+    "base/game_events/CharFallEvent.ts": "ae196a5c90a2e71d2f0c083ace9a5634208e5921c9e3fbd0e807912ed664efd9",
+    "base/game_events/CharHueEvent.ts": "fcc706cf50830a8a31901a3b7a056e7f71d3dd568a4ceb25c7f2eaed641876dd",
+    "base/game_events/CharItemManipulationEvent.ts": "8ee98fde9affc4ada21644975847b0f01b457988975b54e0c36f3005422e29e7",
+    "base/game_events/CharLevelChangeEvent.ts": "e30679314c0c0f60f49dd747175877bf724591baa1bb76eb9a90f4ad9efe127f",
+    "base/game_events/CharRotationEvent.ts": "2c0c1d2666c4bff5c1ec6dad89cf137c0c1ad7e97f086177c48840e3d98d6b9b",
+    "base/game_events/CharShadowVisibilityEvent.ts": "6944d097efbd31b2dcf736253212a713c2edc4500a6faa1f5c6e7a0c12ddf56d",
+    "base/game_events/CharSplashSweatDropsEvent.ts": "29b3f926de1c176530763120860aa057f8e5b0450512c09e9ae1446cbc37c120",
+    "base/game_events/CharTweenPositionEvent.ts": "51f585ff58c0c588df045af1b7effc3851055ff51d61b3c310ba292c38a868ac",
+    "base/game_events/ChestEvent.ts": "df48101c02f4d9e6fcc8d3c710eef28bf845da80f4232149e532000e38936dcc",
+    "base/game_events/ColorizeCharEvent.ts": "dc525a8714b3b31c43a012e29d10861fc056f315bc5b96f8c546381d59b0a452",
+    "base/game_events/ColorizeMapEvent.ts": "3c76719c12b9c5e57945e9f693b99f8b4b1786afc5c35ac3c00e36f5e98ad486",
+    "base/game_events/ControlBgmEvent.ts": "dabc27dc45541e0316ed0590ab652ab815c2802144954bab83a2a104c890d9c5",
+    "base/game_events/CreateStorageVarEvent.ts": "21fbad8c62bd5af4fb64b66ee3116c7d16bab4cb1e42133cf2a1213367600859",
+    "base/game_events/CustomCollisionBodyEvent.ts": "e134f07bce7d09fe5cf7797392063f021335fda533954be45987a6e9540b0c0b",
+    "base/game_events/DestroyerEvent.ts": "6e24b6813918a72320f84841cfacb863ccc3757ab6c77570c9a75bbd0264d37d",
+    "base/game_events/DialogEvent.ts": "0df6252721d0d80cf7b240bb9799266f128126c4076bdcc5fcf47d330c427bad",
+    "base/game_events/DjinnGetEvent.ts": "a33bfcea2c77a580e96500158827b2247471c72aef26e2f7b058da1f46c55e91",
+    "base/game_events/DjinnSetStatusEvent.ts": "f418370e30c55c8d7d89980d70a83de8159c622f73572fd68d34ec96551a172c",
+    "base/game_events/EmoticonEvent.ts": "2d683ec475105d71d0f5f1eb7aeafc01bf7571071e3487c5aae038b27683751e",
+    "base/game_events/EventActivationEvent.ts": "c3dc2179f45ee5c49462fe93b619a7c94912cd29f39ba9d46b75a6b3fe9fbeb9",
+    "base/game_events/EventCallerEvent.ts": "07ef0e97ed5b3f0502e428da41109ea71d07b2f7ab606a77a6e07e3ecd14617e",
+    "base/game_events/EventsHolderEvent.ts": "f7bc8e108b6f335b0d8f8b466fd2d6ed509d57f0515b7b79a73495081bea8ba4",
+    "base/game_events/EventsLoopEvent.ts": "1d77922325332857af1f2f3f7f98e26951f23b6a2cb33770d945f527604cd7be",
+    "base/game_events/ExitSandModeEvent.ts": "ed4b443085223bde4ae9a27caf7522e79c2564641790b15cb857b87396fcf682",
+    "base/game_events/FaceDirectionEvent.ts": "57716d9e9e8cdede6cfe95727c8c92d4474c5ff81ab147d916a08191ef219f63",
+    "base/game_events/FlameCharEvent.ts": "198423e35a147b349761cf8541ed7e5e9dad2194548bbb72be6cd8d078819a73",
+    "base/game_events/GameEvent.ts": "ac672ab63cf968333767a593a53babf4fa00b33ea65675a66c96faf915cd6ccd",
+    "base/game_events/GameEventManager.ts": "2a2d0514e744e9c105de0b45174643e5df7ce0ecad6d5354c68bea1e20a111ee",
+    "base/game_events/GenericSpriteEvent.ts": "71ac142703bb310ef493670cee30d4730ab0643049ba22f688a6b02c9cdbbe05",
+    "base/game_events/GrantAbilityEvent.ts": "9f8d05c3b7f099d6b0732fb9150f4aad29cfaad0b0ea5ef4bcb2eef259e0e99b",
+    "base/game_events/IOAnimPlayEvent.ts": "4381a2707f617defb90c65c4af43978f2ad9ae67922068c4dd1f7c86747e7b12",
+    "base/game_events/IOTweenPositionEvent.ts": "2ac3990a9d6390d9a93e4783ed84ca1ba162b0b530329ca44a93af453dba1908",
+    "base/game_events/ItemChecksEvent.ts": "5e06cc7cbccb3bd0f69af6a287b1c46f2d8d3be0bd04e7d583d66969ddcf4eb2",
+    "base/game_events/JumpEvent.ts": "817ab184c6e4f7fd24e00e1c049099d3c775b2eaa951b7d3243701dbd4505bb6",
+    "base/game_events/LayerTweenEvent.ts": "a38ec7c54ed116e8789dbbab3c09bea01fe6bb6a84834c49f13436518f3fe917",
+    "base/game_events/LayerVisibilityEvent.ts": "b101229c9705ef424382d056a0b2229786244acaf37065e8d5827fb68a097c5d",
+    "base/game_events/LookEvent.ts": "a2108ca10b903db54fc6ec5c0fe456089870883711ffe7be4d5dfafcc5de3858",
+    "base/game_events/MainCharsJoinSplitEvent.ts": "ce2765e1d6f7a495d2b91694b0b4c170fad3dc0d9bec643b6979976e3691e0d2",
+    "base/game_events/MapBlendModeEvent.ts": "7331c141af31ea165cb6a3f694ad93872af82fe3fbb987e90d36dfc143e3f3a2",
+    "base/game_events/MapOpacityEvent.ts": "e715e4a78bf2637ffe867f3eba54ca210a761418641b9349516fae7090edb0e5",
+    "base/game_events/MoveEvent.ts": "5f02fd64e23b741caafcc1460b81669a613a3888a44e899187bbb9113b174c2b",
+    "base/game_events/OutlineCharEvent.ts": "ed4f9c1e44815d3c1e4649312d6e30aa0f3a2087b8d90316bc114f42d03001fc",
+    "base/game_events/ParticlesEvent.ts": "e1787c40ae1de5ddd880f64e115b9fcc0a959a2094bf09c1a9f54b0d789db643",
+    "base/game_events/PartyJoinEvent.ts": "af3750ae604f04f24f78318a4fcce780230c2ce1ab4a5b119e9b5e3af95ceb2c",
+    "base/game_events/PsynergyStoneEvent.ts": "3b62788ccacc6c985095e736669250f4447322961255c6fd1151d0ed7c316908",
+    "base/game_events/SetCharActivationEvent.ts": "8a67f4de4fbfcdd1c8f9454c2b84d837e30db9283cf394d56b342fb21729cc6f",
+    "base/game_events/SetCharCollisionEvent.ts": "ea9a35087268f7f839a978fb828157a400591d2f8895115a8e89abda84d3af3e",
+    "base/game_events/SetCharExpEvent.ts": "f183b90edd9b7b6e56d5dd9641cee87469e20993be9873ecb881ce7be4896b54",
+    "base/game_events/SetCharHPPPEvent.ts": "48e356dd6f659d4c289a450a0373296b3fdcedd74fdcf702ef762c9256763b4a",
+    "base/game_events/SetCharVisibilityEvent.ts": "1930ac9f52b27f6aa275128495287d55ba2ddf71c4bef7375f8e5a6bf21f13b4",
+    "base/game_events/SetIoActivationEvent.ts": "0a67180c3a0a240317d142ed19c9efe0f446a4b86a860a9c91881790fbbc298a",
+    "base/game_events/SetIoCollisionEvent.ts": "b3d577e4f6c5ae77b7bed32d6b4436425944edcd0960192b63418aff6ca0ff51",
+    "base/game_events/SetIoVisibilityEvent.ts": "25eba6801926e17f5ff476bf2e84638fcc6eec5576c977405e580bf9bee4e824",
+    "base/game_events/SetNpcCollisionEvent.ts": "4b886e0b7b4ac64c5596e4a3464a2b82869e17a32aca443c2da88702aa21d1b2",
+    "base/game_events/SetPartyCoinsEvent.ts": "395bffc2c498e93e89629ea1603fa05cf9fcc09dfceb76b405776cc1b8bc7730",
+    "base/game_events/SetPermanentStatusEvent.ts": "7cd7548381c1343c6c9d167d23c6aefa1f2a004ba4331df86a5a97576a562f2c",
+    "base/game_events/SetValueEvent.ts": "edf2d5affca894588a73ae747a32d7b4bceafb30492ca07a9f47c635f8b3edaf",
+    "base/game_events/StorageChangeEvent.ts": "1c24267ffa0b18a02560a9fe8925d9e66feaf48126f2c8d0f8bc24c7b5fce302",
+    "base/game_events/SummonEvent.ts": "8dcf92364950928366835f496f054ad909064f13ba355b76e73d18fa0ac94ca1",
+    "base/game_events/TeleportEvent.ts": "96ad0c610a93f572a40d97ad4360d14d7dce014397354d2167271e8a6cb3551c",
+    "base/game_events/TileEventManageEvent.ts": "f556d09f1b1ed97dae79198db4f43adef0f43b57f0b565e681b797f94da6adae",
+    "base/game_events/TimerEvent.ts": "e0fa1b12fbcb1dc7aa5c4e8060d4de6cba6efccbac2e3b1d3d07b2b245868738",
+    "base/game_events/TintCharEvent.ts": "14a274a425b0d1d95ab739ffb80d8ff9bc32cbce8e30e4f5ac07ffdb1b1b4d77",
+    "base/initializers/abilities.ts": "1dc0ec535529251b4c1e0c5ebfbd25e54677b073a49e13cb2c0e5504fa8d7756",
+    "base/initializers/assets_loader.ts": "4fb16c33100eececbd9f2839d0febc5109b88e51f9e6a800102ba42887a19aa1",
+    "base/initializers/bgm.ts": "5f6d79e0b7990c8179bb00722cc3992df90544ed031a76c65fde1830896fd610",
+    "base/initializers/cast_recipes.ts": "1e5da60b82bbb21a9c3a9ad7680af30e6ed875a8388a9d44deec2e5c81b0342f",
+    "base/initializers/databases_loader.ts": "937bc029f0cb3676ba9eb42ef9eb0656415ed40297a4c08d2abc4b1359dc4ba1",
+    "base/initializers/djinni.ts": "0a9532aedb366d4d6155aaee97ca9907d9e6999974b4a90720714f21f889db03",
+    "base/initializers/enemies.ts": "a2ce2ad19dd746b3bf432b4dbc5e1a618ccdcd33df8475b869f7c46d38dec48f",
+    "base/initializers/initialize_info.ts": "13fb21578b5cde592c71582d1c6fa02c3111fb14f297a72728d0b9ca338527b1",
+    "base/initializers/inn.ts": "d0abcfbda4fb16fd56c5d51bb9099a32381dca1a9c10c71998dee89207187feb",
+    "base/initializers/interactable_objects.ts": "231a574ef56884f98fa3cf15c63c8b2413e75b492e3dce002ebc8beaac2e9754",
+    "base/initializers/items.ts": "424e20e6b7e211c0fbdb43c28f6dc515ffef3966a6b784ee525fc9e7c59b7e8d",
+    "base/initializers/main_chars.ts": "447bc9d50513df3d06e840a0b2db8b56efbb923d30423072dbbcc8e9fa3de93e",
+    "base/initializers/maps.ts": "00a90eaacdcaa245442cfd6072a4b9d1684e914f3c42d5d49a27c8f3ca25fc89",
+    "base/initializers/misc_battle_anim_recipes.ts": "12fda00ef38216f94d76d54b4816c729d6448f01fd2cb5450c9e8db60335cde2",
+    "base/initializers/misc_data.ts": "1d58d570f2695ae3f93d87f1863ab7cf2da609008a7a6ebed2b11d4ccf8bb0b7",
+    "base/initializers/npcs.ts": "0baa057ef2d8998e296718b49150e69af0561a83206f15e05a1f4067aa0d0be8",
+    "base/initializers/shops.ts": "328ce12ef2b4a4921451a6d6e9f6cae1f5d7a022cbc3f26a8a8b8b810375d155",
+    "base/initializers/sound_effects.ts": "69db94808f8e26a8196608c2e3c1b5fa61de7cf17ee8924f52eb1623d4709d9d",
+    "base/initializers/summons.ts": "57ecfd6388d7200375979318e9167b93872bff03f37ff2341bc791e7c9dda3dc",
+    "base/interactable_objects/Breakable.ts": "5765cbdd64566dc3c2d3378e3e7c528de63b31fa9f682ef25be401e45c3cce95",
+    "base/interactable_objects/InteractableObjects.ts": "7febf46d6c00bf897e96440ff826bfc3f6bdc9a36bb6f3997c2521a09cb07514",
+    "base/interactable_objects/Pushable.ts": "9d45733c5b13c36a0b6ef53d4217cf456776c5aba7e189d721af944d90b57cae",
+    "base/interactable_objects/RollingPillar.ts": "5992b007e7acbb7ce3759a82f5d38355ca54a33f2ef9b83ae33835ef935e1a51",
+    "base/interactable_objects/RopeDock.ts": "bd4e75ae08c8f164f5cef9ea9e3187f7b24e017b24426cfaf9f883d08dcc38cc",
+    "base/interactable_objects/WhirlwindSource.ts": "9ea4485594db59882ef01111d445a597f6ddda117df72d77b1c889b8c2669f55",
+    "base/magic_numbers.ts": "593d6b36fc69638795a4a5b7b7657d0544dff2f24c9ff86b2fb41f0bf25b60ee",
+    "base/main_menus/HealerMenu.ts": "39d00ffadd6a380d006481b054f4d53a71b86cefe33fd1e83abb6e8231cd600c",
+    "base/main_menus/InnMenu.ts": "96655a9cbffdd1e6b543718097ec2b520e4f12f38c829dc7a7dcee6238c144c9",
+    "base/main_menus/MainBattleMenu.ts": "b21e0d4a38191762d41d8e24e7e163112c4964da0c4ea92335798e3c57c3c626",
+    "base/main_menus/MainDjinnMenu.ts": "8cd97abefdb228cbc1cb0cebbeaf40aacd72ab495ce4e69b603c67e603f68247",
+    "base/main_menus/MainItemMenu.ts": "80c65625ff8e0072df7be156248ff2399558800ac77b0de8ebd574bd1678265b",
+    "base/main_menus/MainMenu.ts": "d1df1ff0a56d58bad6e20c888be41d6a8173c3b4e524c374557ecff81e041e61",
+    "base/main_menus/MainPsynergyMenu.ts": "ac80643a646a8efca6b42195cbea19b891fdb429f6c8419c734ba2ac1b6be082",
+    "base/main_menus/MainStatusMenu.ts": "efa92d331e957e08989c93653ffeee3315a7f056d9d79feb7af9a68481c09728",
+    "base/main_menus/SaveMenu.ts": "460cda3cf15e704cfeb07412444df160097aa85db88d0401ee087d0cf67478e2",
+    "base/main_menus/ShopMenu.ts": "cc58cc22e53823516e0d8db71eecb78245b522324797c2b918cf57b0375403be",
+    "base/main_menus/StartMenu.ts": "c11c6a20e82d13248b0802a9b75624d9a302053c24e27c17d39727137d5f8d2e",
+    "base/support_menus/BattleStatusDjinn.ts": "3774a392e12a1726ab990f3afbbd08d29b9ff1ae616eea3ce4d4e55e5af0e510",
+    "base/support_menus/BattleStatusItems.ts": "7e0ad2d31481e58b2ba8d73b0504ab310591c33bc4386ba093e9bd69ded4c90d",
+    "base/support_menus/BattleStatusPsynergy.ts": "4f427ef0a957e5488769830a33a31eb743b6b143c2c16c32d50a60ede8c84634",
+    "base/support_menus/BattleStatusStatistics.ts": "6c8ef289c6a16ae991d3adb38a5d7f987ad861545d4e43ef90ba457123becb5a",
+    "base/support_menus/CharsMenu.ts": "f70d02b7d65f9677e975760592d4391ed5e67dfa0bb6f8b6d67e7539abdd0b0a",
+    "base/support_menus/HorizontalMenu.ts": "96cfd5bca1235da59caf713ccc70b5866cc03ca017e1a6c9b51d18c91564efac",
+    "base/support_menus/MainStatusDjinn.ts": "ec6961695ddd7305ab49112341b65601d44a8563bd77630d089791434e91546f",
+    "base/support_menus/MainStatusItems.ts": "cf4b33241ef0ecfe39f0580b073d3a200ab6c199acb28f975938333917c32ec0",
+    "base/support_menus/MainStatusPsynergy.ts": "5fe0123413c6d1c9e3c0142465e93a31f85c76ac9ff98b415a562cb3e44711ee",
+    "base/support_menus/MainStatusStatistics.ts": "b92d832929bb8f45646962ca5ccd1aba555003e8360e8e989ff974f75cf22024",
+    "base/support_menus/PageIndicator.ts": "623d5deb35eef80c4d867e065daece8c2fcfc9a6ac1406c52e5795199e14b3c0",
+    "base/support_menus/StatusComponent.ts": "92d5169f4ebb4f7eb4bcb2ed35386a63af5923268e2e1ffd392ca0d28d143a7b",
+    "base/tile_events/ClimbEvent.ts": "53783655f34cf8498384faa5b207d841d2a3fb391d325faffbf23406e4bce22f",
+    "base/tile_events/CollisionEvent.ts": "f864c3cebbda404ba0b3992123b33b0f815aed99519e2787be2aaed95f6c51cb",
+    "base/tile_events/EventTriggerEvent.ts": "36a55050822d6089e21a8a4c159acdbbb3ae32bb575d7180ae9ac7a987b98520",
+    "base/tile_events/FallEvent.ts": "7a5e10fc95fda92432af9457197bfd5915a607f94061816169dad29480a5f0b8",
+    "base/tile_events/IceSlideEvent.ts": "719c04fd8bb8b65e8ebc422222b8efd23c3b0e0b9a14bd3399dc737bc3dc05a3",
+    "base/tile_events/JumpEvent.ts": "fe53a1c7ebf61cc35b214a18f1b18406063c59227dfd62371dc4ea48a93e44b1",
+    "base/tile_events/RopeEvent.ts": "2e801d281331d7643f2beacf03d66aff8cb8f4ca09f402d7e26188a50daa2dc2",
+    "base/tile_events/SliderEvent.ts": "faec17d617abc1f03321b93edb3ecc50785c549352e16dd13c1b295d8df07de0",
+    "base/tile_events/SpeedEvent.ts": "57ce1165c8609f4a0970aa35547fe4911c60ff07ca00a295791760939f39ae4f",
+    "base/tile_events/StepEvent.ts": "ab0b71905de2ac91a5ff749cce79e3471943607358993202e1ec85ddc1a8453f",
+    "base/tile_events/TeleportEvent.ts": "7287421e49276c97708f115b8ea3323b5e847b37bb55ee2c80469e4b7a20b97b",
+    "base/tile_events/TileEvent.ts": "a8d2e2730b55e4936c3f487e168331b8baca96eee66082b9119d085bf407d689",
+    "base/tile_events/TileEventManager.ts": "70b5b7a32bf87f8d3673e95cf61dbb72a95c25f990da23229cf4dd870a1bb143",
+    "base/utils.ts": "bc0384fa5b5b43d23cae6946cdd80ef765b39b735d4af5a17b10a43c313f74c8",
+    "base/utils/ControlManager.ts": "72fb7343838adc0e6cb8451c24e5581bddc6c1baec1622acd93a5552d356486a",
+    "base/utils/CursorManager.ts": "9a2d5eb2679d5d4642b4c2840f86aa68a086a104d821947120153962be848924",
+    "base/utils/DialogManager.ts": "c68d05686ed025040f8965e35de03ae52e5d15aa6d465191b4913e34b6f0b0d3",
+    "base/utils/Footsteps.ts": "06ca4a20bc6cdd7f510750cbb08444af7fd938d855167fefc095aaff61a016c4",
+    "base/utils/ItemCounter.ts": "cf59d6e151dd6d817ec8a253b382f659be20868ed5e8686ccc164ed5b64993d3",
+    "base/utils/Loader.ts": "86a12757ae07663689e5fe3317154f55f9bb824d908594fbaf798856dfe826aa",
+    "base/windows/BasicInfoWindow.ts": "800941ef4db88223c8d4ac5d2c5a5cefd2634889abf81665be365fdc8ebb5371",
+    "base/windows/CharsStatusWindow.ts": "d1d71681cc9dd8b9b7f06f407afc2b3dc08aa595afd962e185fd2b787954c4c7",
+    "base/windows/FieldPsynergyWindow.ts": "5315964c40a2c43f8bb998e636ef69fe19d56928535f9edab152a7cebdce2010",
+    "base/windows/ItemPsynergyChooseWindow.ts": "5358fe99a81ec5b801cb773896afa406353cbc789c7e79efc420760c4d414ec8",
+    "base/windows/LoaderWindow.ts": "87a6a194af97f38f0c088a0e9d816e7b248793c2ff0af69bfd3e8035a960c4bf",
+    "base/windows/YesNoMenu.ts": "de9902118ba5865f1687431cfad0dc052bb911f5f6eff339d78e1a26a2528a96",
+    "base/windows/battle/BattleDescriptionWindow.ts": "cb07bd222d0916ddeef2601be7b5e0b43873806068e67146eddf02aa1952ac58",
+    "base/windows/battle/BattleDjinnWindow.ts": "08b0db0af0c36b265957aa947990bfff4dc5194a7bd12defdd76ea97bf35f78f",
+    "base/windows/battle/BattleItemWindow.ts": "52fa9fc2cececcd1d56b9a45dccd699759c2cb83a10623a7c2685c126478cd91",
+    "base/windows/battle/BattlePsynergyWindow.ts": "6897875b85b177a6032ce82ea5e41cbe8a7277d39ef1f9fbbf8e1e886511651c",
+    "base/windows/battle/BattleStatusWindow.ts": "86cbd38b07f4b429546694684d5aa4f9d738baa2750744df6c36687c621d1b70",
+    "base/windows/battle/BattleSummonWindow.ts": "b05dbfd91883598b1d3946cbf80376018ee5cc538c7fc2996665c34ac35bab3b",
+    "base/windows/battle/ChoosingTargetWindow.ts": "2812cca9e8cfabb1a3397c99264d9c067ef56ca547a197fc49fb0b9881e0de15",
+    "base/windows/battle/DjinnStatsWindow.ts": "d94726ce8d747fde14d686b6cadea7d0938f61934f08cb021de4e4c9425d3a67",
+    "base/windows/battle/SummonDjinnStandbyWindow.ts": "27123060449a5712c4897a24776d4856c9db1682f66f9cfeb08b41649170e8e2",
+    "base/windows/djinn/CharsQuickInfoDjinnWindow.ts": "b15c359f88554ba4ba2035136485cf65d0ed210d5ce080465e06bd729565bf94",
+    "base/windows/djinn/DjinnActionWindow.ts": "f6e6140b41e8f9c32c80ede3ee3f7bf67523f201db01d3e0c53cf5a3413f82e6",
+    "base/windows/djinn/DjinnCharStatsWindow.ts": "c593167d9859b071aa252967c4f6cd5ec66ebc69ab6df6a28d73dd4a29f19095",
+    "base/windows/djinn/DjinnListWindow.ts": "37403ebdfe4548de5a8f528fb0485c8413090209ff352716a53e0bc5110895b3",
+    "base/windows/djinn/DjinnModeHeaderWindow.ts": "dff888e63459f7a2cad38069b060216131301c52c3303825041e4d046dab29ec",
+    "base/windows/djinn/DjinnPsynergyWindow.ts": "5adc1e75fd4a315b2b31b1c3c34383b78ec248700d2e5e54f626eac7cd369ef9",
+    "base/windows/item/AbilityGetWithItemWindow.ts": "433548e5c6361e67fcfb08e1a10e8c10114dacf771bb2492c5807f4367d424f8",
+    "base/windows/item/ClassChangeWithItemWindow.ts": "ea47f1096c5636b75ac504aea30ad8d21b2e2d439658a689a390e3664801809c",
+    "base/windows/item/DropItemWindow.ts": "738822d60e1c4f132f978d261d6e2a7d0384a0429fb49f5a67fab1e53f23c316",
+    "base/windows/item/ItemOptionsWindow.ts": "05268bed8403f1fbdf304be65361b0893851127a5fa91954263e83d597970400",
+    "base/windows/item/ItemQuantityManagerWindow.ts": "2acb31fa2e2bebf114935cf604d4d3059be1dccdcd55345f31fc2c2ecb59fd53",
+    "base/windows/item/StatsCheckWithItemWindow.ts": "38c790ce1802d965a7b5143363e387253c261ddb53550d99ce431763541e395a",
+    "base/windows/item/StatsOrClassCheckWithItemWindow.ts": "4ce3b48c6a9c84d3b174150f6e93aff53afea1bc0cb75208deeffc485e3e7034",
+    "base/windows/item/UseGiveItemWindow.ts": "84446ff0bd01ed1ef9279ca76268b66b8271a1ebcf36dee8d26b163060ec32fd",
+    "base/windows/shop/BuyArtifactsMenu.ts": "5a0dcc30b7758ddf138eccb5d588a5e347a45d50d0ac51bc942642df58a7871b",
+    "base/windows/shop/BuySelectMenu.ts": "bdf3aea611300910abd1fd71790465a558608229a586684c1d16075482973fdf",
+    "base/windows/shop/EquipCompare.ts": "607d8bb2b217c81a015ec1dfa1b282ca09fc3ada6de3f790aa0680e5cd9d097c",
+    "base/windows/shop/InventoryWindow.ts": "4822a084bd04a7a795d0328425afc3e3a82358a15ceaf7af17f3a9d4ac7f813e",
+    "base/windows/shop/SellRepairMenu.ts": "658b7fe47355773ba311bc277e51ec05838e8eeecc1af9f10142eac7f2a0701f",
+    "base/windows/shop/ShopItemQuantityWindow.ts": "23ceb5d2306a29d9e47132bab5396955cea87fda46cfb5e0d54f1ce42bcd6566",
+    "base/windows/shop/ShopkeepDialog.ts": "b5d76b196c3cb18b98fa32f4111041fab9b6e1625cd44b883cce02d474f4b71a",
+    "package.json": "e558b3187086d0003bd02261471ad44c85815a54a798373508e0cf6c503207e4",
+    "tsconfig.json": "b7962db8ac6d6d062683fcc34a5e46646eaed1cd9aa1329f1d3335396f95dbdb",
+    "types/codemirror.d.ts": "5b858095310bfad92431649e5878af08a5a80e851c3653929b672715ada88e62",
+    "types/p2.d.ts": "91d6f25ef90cbdd8253499a7ee64e7564519d6589354c1d8a9ac1685c8a5f0b3",
+    "types/particlestorm.d.ts": "f68c6f6295e96e0ab0b7c6740dc28e016c5339bed927e98a02eba58f798bdda2",
+    "types/phaser.d.ts": "fafa4a3f4dfa39eb9bf47accb15dcc517f349b82bb460de0112b7b8825015a2f",
+    "types/pixi.d.ts": "11f04f2814c6f0f96cda6833d5e46a0aff7c48f90f8d3ea1fc83be6914bb2ec6"
+  },
+  "source_anchors": [
+    {
+      "path": "README.md",
+      "sha256": "c1d395a5e734564d789d9a78b549448113ce2fa964feb0d4058c27aaf30f7a9c",
+      "anchors": [
+        {
+          "needle": "PhaserJS CE 2.19.0",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "needle": "does not aim to do exactly the same engine",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "needle": "Javascript (legacy) and Typescript",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "needle": "their media are property",
+          "lines": [
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "path": "LICENSE.txt",
+      "sha256": "2be42d073b1d563c7c2d5b7540dce6be6eb70852abf72545ff4d94594651d3a5",
+      "anchors": [
+        {
+          "needle": "MIT License",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "needle": "Copyright (c) 2020 Joao Paulo Oliveira Fernandes",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "needle": "permission notice shall be included",
+          "lines": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/GoldenSun.ts",
+      "sha256": "ed0ebe1518675f3ea5a32a7e794218ae18b463d9816390575e7fba188b783774",
+      "anchors": [
+        {
+          "needle": "renderer: Phaser.WEBGL",
+          "lines": [
+            161
+          ]
+        },
+        {
+          "needle": "antialias: false",
+          "lines": [
+            164
+          ]
+        },
+        {
+          "needle": "roundPixels = true",
+          "lines": [
+            197
+          ]
+        },
+        {
+          "needle": "private async create()",
+          "lines": [
+            240
+          ]
+        },
+        {
+          "needle": "private update()",
+          "lines": [
+            588
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/SpriteBase.ts",
+      "sha256": "358cfb72b3dc3c890f89ab5b4001c0e53ebeef0141a4021d39e6aa9f599147c3",
+      "anchors": [
+        {
+          "needle": "game.load.atlasJSONHash",
+          "lines": [
+            144
+          ]
+        },
+        {
+          "needle": "Phaser.Animation.generateFrameNames",
+          "lines": [
+            153
+          ]
+        },
+        {
+          "needle": "sprite.animations.add",
+          "lines": [
+            170
+          ]
+        },
+        {
+          "needle": "frame_counts[i] - 1",
+          "lines": [
+            199
+          ]
+        },
+        {
+          "needle": "frame_rate,",
+          "lines": [
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/initializers/npcs.ts",
+      "sha256": "0baa057ef2d8998e296718b49150e69af0561a83206f15e05a1f4067aa0d0be8",
+      "anchors": [
+        {
+          "needle": "action_obj.frames_count",
+          "lines": [
+            22
+          ]
+        },
+        {
+          "needle": "action_obj.frame_rate",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "needle": "action_obj.spritesheet.image",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "needle": "generateAllFrames()",
+          "lines": [
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/utils.ts",
+      "sha256": "bc0384fa5b5b43d23cae6946cdd80ef765b39b735d4af5a17b10a43c313f74c8",
+      "anchors": [
+        {
+          "needle": "export enum directions",
+          "lines": [
+            49
+          ]
+        },
+        {
+          "needle": "right = 0",
+          "lines": [
+            50
+          ]
+        },
+        {
+          "needle": "down_right = 1",
+          "lines": [
+            51
+          ]
+        },
+        {
+          "needle": "left = 4",
+          "lines": [
+            54
+          ]
+        },
+        {
+          "needle": "up_right = 7",
+          "lines": [
+            57
+          ]
+        },
+        {
+          "needle": "export const directions_angles",
+          "lines": [
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/ControllableChar.ts",
+      "sha256": "312f632380bb1c8ed63de5554b7f1096e9928f1feec71ef288b61da1ed59345c",
+      "anchors": [
+        {
+          "needle": "this.sprite.anchor.setTo(anchor_x, anchor_y)",
+          "lines": [
+            588
+          ]
+        },
+        {
+          "needle": "this.sprite.roundPx = true",
+          "lines": [
+            592
+          ]
+        },
+        {
+          "needle": "reverse_directions[this.current_direction]",
+          "lines": [
+            763,
+            1506
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/battle/PlayerSprite.ts",
+      "sha256": "06e41e7006084d73c4f94d35db4332e2c9e404a26fcbbd3f61da9d5033617068",
+      "anchors": [
+        {
+          "needle": "this._char_sprite.anchor.setTo(0.5, 1)",
+          "lines": [
+            277
+          ]
+        },
+        {
+          "needle": "this._char_sprite.available_filters[tint_filter.key]",
+          "lines": [
+            289
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/battle/BattleStage.ts",
+      "sha256": "d8ba72000479f86a5ad73d84e29278e72ec4fde917f348abe60832231b9641e9",
+      "anchors": [
+        {
+          "needle": "Math.cos(relative_angle) <= 0",
+          "lines": [
+            616
+          ]
+        },
+        {
+          "needle": "player_sprite.scale.setTo(-player_sprite.scale.x, player_sprite.scale.y)",
+          "lines": [
+            617
+          ]
+        }
+      ]
+    },
+    {
+      "path": "assets/filters/tint.js",
+      "sha256": "5dd6cde9dc9cd340990721602091a669e2d0464b6d01abf784db3b3510afa99a",
+      "anchors": [
+        {
+          "needle": "uniform sampler2D",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "needle": "texture2D",
+          "lines": [
+            18
+          ]
+        },
+        {
+          "needle": "gl_FragColor.r",
+          "lines": [
+            19,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "path": "assets/filters/pixel_shift.js",
+      "sha256": "e53f21dcabfd569397e0cab132b99ac8556842aa175830e7f60069037d98d252",
+      "anchors": [
+        {
+          "needle": "uniform float      x_shift",
+          "lines": [
+            17
+          ]
+        },
+        {
+          "needle": "uv = (uv_px + shift) / resolution",
+          "lines": [
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "path": "base/battle/BattleAnimation.ts",
+      "sha256": "19a00f5167adc63109760a44fa2bb9a802efd638b35a3b4df3af63bbe55d28eb",
+      "anchors": [
+        {
+          "needle": "$08680000",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "needle": "0x80 (128, 8-bit graphics)",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "needle": "0x20 (32,",
+          "lines": [
+            11
+          ]
+        }
+      ]
+    }
+  ],
+  "parsed_html5_constants": {
+    "directions": {
+      "right": 0,
+      "down_right": 1,
+      "down": 2,
+      "down_left": 3,
+      "left": 4,
+      "up_left": 5,
+      "up": 6,
+      "up_right": 7
+    },
+    "GAME_WIDTH": 240,
+    "GAME_HEIGHT": 160,
+    "TARGET_FPS": 60
+  },
+  "comparison": {
+    "concordant_concepts": [
+      "240x160 viewport",
+      "Named directional sprite animations",
+      "Horizontal mirror transform exists in battle"
+    ],
+    "different_representations": [
+      "HTML5 image+JSON atlas vs 16 native 8x8 8bpp OBJ tiles",
+      "Texture RGB shader operations vs shared 224-entry OBJ BGR555 palette",
+      "Phaser scale.x sign and anchor vs native inverse-sampled Q8 OAM matrix",
+      "Eight named field directions vs native 16-bit heading and per-sprite direction selection",
+      "Atlas generated frame names/rates vs ROM animation script and frame IDs"
+    ],
+    "unknown": [
+      "Identity of HTML5 assets with SPR_000 pixels, palette and animation timings",
+      "Raster pixel centre and 32-x versus 31-x behavior in Phaser",
+      "Exact mapping of named directions and atlas IDs to ROM metadata/heading"
+    ],
+    "rom_reference": {
+      "tile_count": 16,
+      "obj_palette_entries": 224,
+      "mirrored_heading": "0x8000",
+      "mirror_matrix_q8": [
+        -256,
+        0,
+        0,
+        256
+      ],
+      "simple_flip_mismatches": 246,
+      "ppu_pixel_mismatches": 0,
+      "authority": "Existing ROM/Unicorn and mGBA proofs, not HTML5"
+    },
+    "html5_pixel_equivalence_claimed": false
+  },
+  "dependencies_installed": false,
+  "build_run": false,
+  "submodule_init_run": false,
+  "game_assets_downloaded": false,
+  "shader_sources_in_assets_filters_are_code": true,
+  "ghidra_started": false,
+  "ghidra_mutated": false,
+  "provenance_sha256": {
+    "scripts/audit_html5_reference.py": "e53478d4098f906991bc6d21082dfb4c3064dd8f27cb2e5b4cab60a889f40c38",
+    "work/external_references.json": "a59fce6cf410c8ac20d31d06e5a8e25be4467ed054d1c8a4b1a6dc190fcb9bb5",
+    "external/README.md": "415139318a76972794c10222d3ce7d97b3f877cf36feaeac2beae153065a0f60",
+    "work/step28_decode_verification.json": "35155598284b162a015c9f27cf63878bba28a08d0cd4f610eeb6480f59f9f315",
+    "work/step29_upload_verification.json": "5951e5e942ac07d8fb1e96ded582d0594e951960aae70501fe0d147ed781879c",
+    "work/step30_rgb_verification.json": "8f1d0555c6ea4d44d52daa2d3fbdbd4d9b18f9f04ad99a9f4a7c52675410eda6",
+    "work/step31_ppu_verification.json": "f0b08f80c25fc00bbcd60b85536c478ea72e98b6f92f643b92f4a65baebeeec8"
+  },
+  "limits": [
+    "No execution of the HTML5 engine or its renderer",
+    "No media/atlas/database blobs fetched; source-only sparse selection",
+    "Live wiki guidelines consulted separately, not pinned by code commit",
+    "Source anchors are textual checks, not a proof of runtime equivalence"
+  ]
+}

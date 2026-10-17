@@ -1,0 +1,10 @@
+{
+  "same_plan_after_provenance_path_normalization": true,
+  "all_provenance_hashes_valid": true,
+  "baseline_project_closed": true,
+  "copies": [
+    "ghidra_thumb_special_pair_probe",
+    "ghidra_thumb_special_pair_scoped"
+  ],
+  "python_isolated_mode_workaround": "explicit scripts path via runpy; only relative versus absolute provenance keys differ"
+}

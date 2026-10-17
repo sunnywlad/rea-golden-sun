@@ -1,0 +1,170 @@
+{
+  "step": 31,
+  "rom_sha1": "5c4695205413df7db52b9a184815a07783999971",
+  "engine": "/usr/games/mgba 0.10.5 ((unknown))",
+  "library_sha256": "96e3d0f1c0010d5aef2eac439222f58a8c2d05a4132e303094e4645e74482d50",
+  "headers_deb_sha256": "1c8d05a75c2d41f183fda8445bd607601f818b2adc000aaaf769ed6e68cbeea6",
+  "entry": {
+    "method": "Forced PC redirection after native system initialization; before title",
+    "steps_from_reset": 231729,
+    "before": {
+      "pc": "0x8002eda",
+      "cpsr": "0x6000003f",
+      "sp": "0x3007ef4"
+    },
+    "target_thumb": "0x08012519",
+    "natural_menu_access_established": false,
+    "external_memory_writes": 0,
+    "external_register_writes": [
+      "pc"
+    ]
+  },
+  "inputs": {
+    "initial_viewer_frames": 120,
+    "key_masks": [
+      32,
+      0,
+      512,
+      0,
+      8,
+      0,
+      1,
+      0
+    ],
+    "frames_per_mask": 3,
+    "capture_after_extra_frames": 1
+  },
+  "registers_raw_backing": {
+    "DISPCNT": "0x1140",
+    "BG0CNT": "0x400",
+    "MOSAIC": "0x0",
+    "BLDCNT": "0xfe",
+    "BLDALPHA": "0x0",
+    "BLDY": "0x0"
+  },
+  "complete_vram_palette_oam_stable_across_rendered_frame": true,
+  "framebuffer_format": "little-endian uint32: RGB low24, metadata high8 discarded; not RGBA",
+  "rgb_expansion": "(channel5 << 3) | (channel5 >> 2); step30 floor expansion normalized",
+  "private_dumps": {
+    "vram": {
+      "bytes": 98304,
+      "sha256": "18a9b985ccdade9325206bfd13267d652eec16c7313754b5b774b21db2e2de9f"
+    },
+    "palette": {
+      "bytes": 1024,
+      "sha256": "0eb51677a9b9415c3e96e88e661a6d5f90a3a660ecc27eebdd7fef7d28253a7e"
+    },
+    "oam": {
+      "bytes": 1024,
+      "sha256": "f36cbd93f32c5856cc11fbd98f2eb5bf31e7bf686684104e598d3205dde24a83"
+    },
+    "io_bus": {
+      "bytes": 96,
+      "sha256": "1e4c89e59f1f67e706d145ed63bc5e96a8b5a69724cb449ac55a4845666f86f4"
+    }
+  },
+  "framebuffer_sha256": "fd4f877b04343429d3934b9e74a9feac9ce534bb8b4b8efdb6365f10b46795e0",
+  "cases": [
+    {
+      "heading": "0x0",
+      "oam_index": 4,
+      "oam_attributes": [
+        "0x2042",
+        "0x80b8",
+        "0x804"
+      ],
+      "oam_normalized": [
+        8192,
+        32768,
+        2048
+      ],
+      "reference_oam_normalized": [
+        8192,
+        32768,
+        2048
+      ],
+      "top_left": [
+        184,
+        66
+      ],
+      "vram_address": "0x6010080",
+      "tile_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "palette_sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e",
+      "matrix_index": null,
+      "matrix_q8": [
+        256,
+        0,
+        0,
+        256
+      ],
+      "index_sha256": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "step30_analytical_rgba_sha256": "aad3b1161c9358b34b4895203531f9ccce9e05d554cd0a8cba77dd7c42316a12",
+      "ppu_rgb_sha256": "86123bf21c6786990a2942f61f58aef4ea365e2632787621232287109500f704",
+      "expected_rgb_sha256": "86123bf21c6786990a2942f61f58aef4ea365e2632787621232287109500f704",
+      "nonzero_pixels": 258,
+      "opaque_pixel_mismatches": 0,
+      "all_1024_pixel_mismatches": 0,
+      "ordinary_flip_pixel_mismatches": null,
+      "sampling_outside_pixels": 0
+    },
+    {
+      "heading": "0x8000",
+      "oam_index": 3,
+      "oam_attributes": [
+        "0x2142",
+        "0x8248",
+        "0x884"
+      ],
+      "oam_normalized": [
+        8448,
+        32768,
+        2048
+      ],
+      "reference_oam_normalized": [
+        8448,
+        32768,
+        2048
+      ],
+      "top_left": [
+        72,
+        66
+      ],
+      "vram_address": "0x6011080",
+      "tile_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "palette_sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e",
+      "matrix_index": 1,
+      "matrix_q8": [
+        -256,
+        0,
+        0,
+        256
+      ],
+      "index_sha256": "e066e5050fa6708b41db872973ccca7d5e59134e74c486b2602d4dd5b4f9c225",
+      "step30_analytical_rgba_sha256": "a4a6da84ec5ac23ab781a63383e5e14c48ed1d3409883909229f44ef9696dd69",
+      "ppu_rgb_sha256": "d3061c7f8a9edcd9fd7436d692969fc8f7eac1dfe8653ea69a6dc80f5e70def7",
+      "expected_rgb_sha256": "d3061c7f8a9edcd9fd7436d692969fc8f7eac1dfe8653ea69a6dc80f5e70def7",
+      "nonzero_pixels": 258,
+      "opaque_pixel_mismatches": 0,
+      "all_1024_pixel_mismatches": 0,
+      "ordinary_flip_pixel_mismatches": 246,
+      "sampling_outside_pixels": 32
+    }
+  ],
+  "sources_sha256": {
+    "scripts/mgba31.c": "c471b84e725f88388f3cbe1302b1aa9f10926bd16ba93973328215e38c3ed9d9",
+    "scripts/probe_mgba31.py": "b48f6f0f5bc14ab89d27b23db27b21cd0c2112c3407ba50492b4e48c4fa66c5d",
+    "scripts/audit_mgba_ppu.py": "cc2899c5c6a9747f85896410e8e06ae09f2cb264896ecdd5f1e32628e23a6837",
+    "scripts/audit_sprite_decode.py": "643fe30866dea3bb43b895f3fafe73ef4988ceb3bd469d1f67f61f770ea6fa6e",
+    "scripts/audit_sprite_upload.py": "5d09e713090d0f86f416f2048dda6e23fd662fead4bd7fff911968676d21c60f",
+    "scripts/audit_sprite_rgb.py": "0c82f0a1771e3a4966d6d0a0f766e7b9e183aae6737d665abdcb38e7c0c2dc04",
+    "work/step30_rgb_verification.json": "8f1d0555c6ea4d44d52daa2d3fbdbd4d9b18f9f04ad99a9f4a7c52675410eda6"
+  },
+  "limits": [
+    "Viewer access forced by one PC write; no natural menu/input path established",
+    "mGBA software PPU and HLE BIOS, not physical GBA or original BIOS",
+    "Engine constructs heap, objects, tiles, palettes, OAM and DMA natively after forced entry",
+    "Two SPR_000 animation0 frame1 mode0 headings only; shadows switched off via input",
+    "No Ghidra; no package installed; headers downloaded and extracted locally only",
+    "All extracted data and PNGs private; no ROM/image/payload publication"
+  ]
+}

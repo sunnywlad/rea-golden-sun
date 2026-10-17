@@ -1,0 +1,536 @@
+{
+  "verified": true,
+  "created": 87,
+  "before_functions": 2174,
+  "after_functions": 2261,
+  "added_instructions": 323,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "targets": [
+    {
+      "name": "Func_2ef8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2efc",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2f00",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2f04",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2f08",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2f0c",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_380c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_412c",
+      "body_bytes": 24,
+      "instructions": 12,
+      "warnings": 2
+    },
+    {
+      "name": "Func_4270",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_4274",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_49a8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_5ac0",
+      "body_bytes": 30,
+      "instructions": 13,
+      "warnings": 2
+    },
+    {
+      "name": "Func_6798",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_c0c8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_c3ec",
+      "body_bytes": 28,
+      "instructions": 14,
+      "warnings": 2
+    },
+    {
+      "name": "Func_c628",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_c87c",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_ea54",
+      "body_bytes": 12,
+      "instructions": 6,
+      "warnings": 2
+    },
+    {
+      "name": "Func_1656c",
+      "body_bytes": 24,
+      "instructions": 12,
+      "warnings": 2
+    },
+    {
+      "name": "Func_1a90c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0c4",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0c8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0cc",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0d0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0d4",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c0d8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c2f0",
+      "body_bytes": 20,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_1c468",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c924",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_1c9bc",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c9c0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c9c4",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1cf44",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1e418",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1edcc",
+      "body_bytes": 16,
+      "instructions": 8,
+      "warnings": 2
+    },
+    {
+      "name": "Func_1eddc",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_294d0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_78228",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_78a8c",
+      "body_bytes": 18,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_78ecc",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_79004",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_8e990",
+      "body_bytes": 22,
+      "instructions": 10,
+      "warnings": 2
+    },
+    {
+      "name": "Func_8ec4c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_91778",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_91c40",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_92548",
+      "body_bytes": 20,
+      "instructions": 8,
+      "warnings": 2
+    },
+    {
+      "name": "Func_9255c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_92b90",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_930b8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_9315c",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_941dc",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a1bc8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a1bcc",
+      "body_bytes": 16,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a3ce4",
+      "body_bytes": 20,
+      "instructions": 10,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a3eec",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a413c",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a5780",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a5784",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a63dc",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a63e0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a8904",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a9370",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a939c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a93a0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a9a58",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a9e34",
+      "body_bytes": 16,
+      "instructions": 6,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a9e44",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a9f0c",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_aa534",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_b5e10",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_b7e04",
+      "body_bytes": 30,
+      "instructions": 15,
+      "warnings": 2
+    },
+    {
+      "name": "Func_bf65c",
+      "body_bytes": 22,
+      "instructions": 10,
+      "warnings": 2
+    },
+    {
+      "name": "Func_c0edc",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_c1a24",
+      "body_bytes": 16,
+      "instructions": 7,
+      "warnings": 2
+    },
+    {
+      "name": "Func_c2a08",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_d6960",
+      "body_bytes": 16,
+      "instructions": 6,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f2b6c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f2eb8",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f3898",
+      "body_bytes": 20,
+      "instructions": 10,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f38ac",
+      "body_bytes": 16,
+      "instructions": 8,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f40b4",
+      "body_bytes": 28,
+      "instructions": 14,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f9558",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f9564",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_f95c8",
+      "body_bytes": 24,
+      "instructions": 12,
+      "warnings": 2
+    },
+    {
+      "name": "Func_fa260",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_fa318",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    },
+    {
+      "name": "Func_fa484",
+      "body_bytes": 10,
+      "instructions": 4,
+      "warnings": 2
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}

@@ -1,0 +1,15 @@
+# Étape 22 : 58 fonctions longues à pools finaux
+
+Projet validé après sauvegarde, fermeture et réouverture : `archive:ghidra_thumb_literal_large_scoped/step9.gpr`, programme `gs_us_map.elf`. **2 536 fonctions**, dont **2 166/2 253 entrées ROM de référence (96,14 %)**. Gains guidés par le source ; baseline REA inchangée.
+
+Les 58 fonctions ajoutent 6 625 instructions et 14 420 octets de code. Leurs 363 lectures littérales visent 306 mots distincts. Quatre slots possédaient déjà une annotation `/undefined *` à 0x080f04f8, 0x080f04fc, 0x080f0500 et 0x080f0504 : ces unités sont intégralement préservées. Exactement 302 unités undefined4 sont créées sur les autres mots approuvés.
+
+Une copie séparée, `ghidra_thumb_literal_large_probe`, a servi à la reconnaissance ARM de 55 retours. L'export vérifie leur lien au plan, leurs octets, TMode, P-code et motif pop/BX. Une copie propre de l'étape 21 a ensuite reçu les fonctions, les seuls RETURN exportés et les pools indéfinis, sans analyse ARM générale ni effacement de données.
+
+Les audits globaux confirment la conservation des anciennes fonctions, instructions et données définies, des octets de tous les blocs mémoire et des permissions. La réouverture produit les mêmes snapshots, preuves littérales et C. Le second passage retrouve 55 retours et 306 slots préexistants, aucune création. Les 58 C terminent sans avertissement ; seize comportent toutefois une largeur avec LR suspecte. Aucun prototype forcé ni équivalence C générale revendiquée.
+
+Deux sondes ont été confrontées au source. Func_679c conserve sa boucle sans sortie, l'initialisation descendante et les chemins conditionnels du source, y compris un appel vers Func_5d10 encore non récupérée. Func_78144 conserve les tests de disponibilité, les copies halfword et les deux bornages entre 0 et 0x4000, avec correction à 1 d'un ratio nul pour une quantité non nulle. Ses deux appels passent par le stub 0x080022ec vers le corps ARM exécuté en IWRAM 0x03000380 ; ce corps runtime n'est toujours pas reconstruit. Le sens exact du calcul n'est pas déduit d'un nom supposé du callee.
+
+Preuves : `thumb_literal_large_plan/`, `thumb_literal_large_approved_returns.json`, `thumb_literal_large_scoped_before/`, `thumb_literal_large_scoped_recovery/`, `thumb_literal_large_scoped_after/`, `thumb_literal_large_scoped_repeat/`, `thumb_literal_large_scoped_reopened/`, `thumb_literal_large_scoped_verification.json` et journaux correspondants. Les sous-agents ayant atteint leur limite d'utilisation, les contrôles ont été effectués par le principal.
+
+Restent **87 entrées** : 69 Thumb ROM ordinaires, 2 ARM ROM, 12 entrées de stockage rom_770 et 4 code/donnée. Une extension démontre les 15 trampolines de `lib/call_via.s` par une séquence ROM unique à 0x080072e4. Dix Thumb deviennent planifiables avec ces symboles : `thumb_call_via_plan/`. Les destinations finales des appels indirects restent des valeurs runtime. Notion en attente depuis l'étape 13, aucun outil connecté. Mémoire Claude inchangée.

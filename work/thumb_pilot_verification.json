@@ -1,0 +1,74 @@
+{
+  "verified": true,
+  "created": 10,
+  "before_functions": 2164,
+  "after_functions": 2174,
+  "added_instructions": 27,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "targets": [
+    {
+      "name": "Func_3808",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_c0c4",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1a5a0",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_209cc",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    },
+    {
+      "name": "Func_91c3c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_9294c",
+      "body_bytes": 2,
+      "instructions": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Func_c9c9c",
+      "body_bytes": 12,
+      "instructions": 5,
+      "warnings": 2
+    },
+    {
+      "name": "Func_d5274",
+      "body_bytes": 12,
+      "instructions": 5,
+      "warnings": 2
+    },
+    {
+      "name": "Func_d8988",
+      "body_bytes": 12,
+      "instructions": 5,
+      "warnings": 2
+    },
+    {
+      "name": "Func_d9adc",
+      "body_bytes": 12,
+      "instructions": 5,
+      "warnings": 2
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}

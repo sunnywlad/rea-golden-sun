@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Refuse tout commit contenant un fichier interdit (droit d'auteur Nintendo/Camelot).
+# Installation : cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+bad=0
+while IFS= read -r -d '' f; do
+  lower=${f,,}
+  case "$lower" in
+    *.gba|*.elf|*.png|*.jpg|*.jpeg|*.sav|*.ss[0-9]|*.so|*.gpr|*.rep)
+      echo "REFUSE (extension interdite): $f" >&2; bad=1 ;;
+    *_private/*|external/*|work/archives/*|work/ghidra*)
+      echo "REFUSE (chemin interdit): $f" >&2; bad=1 ;;
+  esac
+done < <(git diff --cached --name-only --diff-filter=ACMR -z)
+
+exit $bad

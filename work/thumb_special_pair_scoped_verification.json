@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "created": 2,
+  "before_functions": 2591,
+  "after_functions": 2593,
+  "added_instructions": 674,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "approved_literal_slots": 20,
+  "new_literal_data_units": 16,
+  "targets": [
+    {
+      "name": "Func_12518",
+      "body_bytes": 1416,
+      "instructions": 672,
+      "warnings": 0
+    },
+    {
+      "name": "Func_fa674",
+      "body_bytes": 4,
+      "instructions": 2,
+      "warnings": 0
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established",
+  "before_matches_step25": true,
+  "approved_return_overrides": 0,
+  "preexisting_literal_slots_preserved": 4,
+  "second_pass_idempotent": true,
+  "second_pass_snapshots_targets_literals_and_c_identical": true,
+  "reference_found": 2223,
+  "reference_total": 2253,
+  "reference_recall_percent": 98.67,
+  "remaining": 30,
+  "probe_scoped_c_identical": true
+}

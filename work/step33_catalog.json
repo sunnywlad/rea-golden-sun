@@ -1,0 +1,640 @@
+{
+  "schema": 1,
+  "stages": [
+    {
+      "availability": "unavailable",
+      "id": "1",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 1,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "2",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 2,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "3",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 3,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "4",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 4,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "5",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 5,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "6",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 6,
+      "status": "retained"
+    },
+    {
+      "availability": "unavailable",
+      "id": "7",
+      "notes": "No persisted step report or assigned proof available locally. No earlier outcome inferred.",
+      "number": 7,
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/pointer_candidates.py",
+        "scripts/validate_pointer_xrefs.py",
+        "work/missed_no_pointer_xrefs.json",
+        "work/missed_thumb_xrefs.json",
+        "work/pointer_candidates.json",
+        "work/pointer_run_metadata.json",
+        "work/pointer_summary.md",
+        "work/pointer_validation.json",
+        "work/pointer_xrefs.json",
+        "work/procs.json",
+        "work/repo_funcs.txt"
+      ],
+      "id": "8",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 8,
+      "prefixes": [
+        "work/step8.",
+        "work/step8_",
+        "work/pointer_",
+        "work/missed_"
+      ],
+      "proof": "work/pointer_validation.json",
+      "report": "work/step8.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/RecoverThumb.java",
+        "scripts/recovery_report.py",
+        "work/missed_thumb_xrefs.json",
+        "work/procs_current.json",
+        "work/recovery_saved/after.json",
+        "work/recovery_saved/before.json",
+        "work/recovery_saved/persistence_check.json",
+        "work/recovery_saved/probe_review.md",
+        "work/recovery_saved/targets.json",
+        "work/recovery_targets.tsv",
+        "work/repo_funcs.txt",
+        "work/repo_function_boundaries.tsv"
+      ],
+      "id": "9",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 9,
+      "prefixes": [
+        "work/step9.",
+        "work/step9_",
+        "work/recovery",
+        "work/procs",
+        "work/ghidra/",
+        "work/ghidra_baseline/",
+        "work/ghidra_step9_saved/",
+        "work/ghidra_step9_final/"
+      ],
+      "proof": "work/recovery_saved/persistence_check.json",
+      "report": "work/step9.md",
+      "reviews": [
+        "work/recovery_saved/probe_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/strings_roundtrip.py",
+        "scripts/unknown_reference.py",
+        "work/pointer_validation.json",
+        "work/string_roundtrip/roundtrip.json",
+        "work/unknown50.json",
+        "work/unknown50.tsv",
+        "work/unknown50_rea_inspection.json"
+      ],
+      "id": "10",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 10,
+      "prefixes": [
+        "work/step10.",
+        "work/step10_",
+        "work/unknown50",
+        "work/string"
+      ],
+      "proof": "work/string_roundtrip/roundtrip.json",
+      "report": "work/step10.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/SharedTailProbe.java",
+        "work/shared_selected/verification.json",
+        "work/shared_tail_branch_check.json"
+      ],
+      "id": "11",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 11,
+      "prefixes": [
+        "work/step11.",
+        "work/step11_",
+        "work/shared_",
+        "work/ghidra_shared_"
+      ],
+      "proof": "work/shared_selected/verification.json",
+      "report": "work/step11.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/InventoryMissing.java",
+        "scripts/remaining_reference.py",
+        "work/recover_decoded_rom.tsv",
+        "work/remaining_inventory.json",
+        "work/remaining_reference.json",
+        "work/remaining_runtime_inventory.json",
+        "work/remaining_summary.json",
+        "work/remaining_targets.tsv",
+        "work/repo_funcs.txt"
+      ],
+      "id": "12",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 12,
+      "prefixes": [
+        "work/step12.",
+        "work/step12_",
+        "work/remaining_"
+      ],
+      "proof": "work/remaining_inventory.json",
+      "report": "work/step12.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/RecoverDecoded.java",
+        "work/decoded_recovery/before.json",
+        "work/decoded_recovery/probe_review.md",
+        "work/recover_decoded_rom.tsv"
+      ],
+      "id": "13",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 13,
+      "prefixes": [
+        "work/step13.",
+        "work/step13_",
+        "work/decoded_",
+        "work/recover_decoded",
+        "work/ghidra_decoded"
+      ],
+      "proof": "work/decoded_recovery/verification.json",
+      "report": "work/step13.md",
+      "reviews": [
+        "work/decoded_recovery/probe_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/Func9bb8Flow.java",
+        "scripts/verify_func9bb8.py"
+      ],
+      "id": "14",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 14,
+      "prefixes": [
+        "work/step14.",
+        "work/step14_",
+        "work/func9bb8_",
+        "work/ghidra_func9bb8"
+      ],
+      "proof": "work/func9bb8_final/verification.json",
+      "report": "work/step14.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/RecoverThumb.java",
+        "scripts/RecoveryAudit.java",
+        "scripts/verify_thumb_recovery.py",
+        "work/thumb_pilot_plan/plan.json",
+        "work/thumb_pilot_verification.json"
+      ],
+      "id": "15",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 15,
+      "prefixes": [
+        "work/step15.",
+        "work/step15_",
+        "work/thumb_pilot",
+        "work/thumb_literal_free",
+        "work/ghidra_thumb_pilot"
+      ],
+      "proof": "work/thumb_pilot_verification.json",
+      "report": "work/step15.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/plan_thumb_recovery.py",
+        "scripts/verify_thumb_recovery.py",
+        "work/thumb_pilot_after/snapshot.json",
+        "work/thumb_small_plan/plan.json",
+        "work/thumb_small_verification.json"
+      ],
+      "id": "16",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 16,
+      "prefixes": [
+        "work/step16.",
+        "work/step16_",
+        "work/thumb_small",
+        "work/ghidra_thumb_small"
+      ],
+      "proof": "work/thumb_small_verification.json",
+      "report": "work/step16.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/verify_arm_analysis.py",
+        "work/thumb_all97.tsv",
+        "work/thumb_analyzed_verification.json"
+      ],
+      "id": "17",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 17,
+      "prefixes": [
+        "work/step17.",
+        "work/step17_",
+        "work/thumb_analyzed",
+        "work/thumb_arm",
+        "work/thumb_return",
+        "work/ghidra_thumb_analyzed",
+        "work/ghidra_thumb_arm",
+        "work/ghidra_thumb_return"
+      ],
+      "proof": "work/thumb_analyzed_verification.json",
+      "report": "work/step17.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/resolve_thumb_aliases.py",
+        "scripts/verify_thumb_recovery.py"
+      ],
+      "id": "18",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 18,
+      "prefixes": [
+        "work/step18.",
+        "work/step18_",
+        "work/thumb_long",
+        "work/ghidra_thumb_long"
+      ],
+      "proof": "work/thumb_long_verification.json",
+      "report": "work/step18.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/resolve_thumb_aliases.py"
+      ],
+      "id": "19",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 19,
+      "prefixes": [
+        "work/step19.",
+        "work/step19_",
+        "work/thumb_alias",
+        "work/ghidra_thumb_alias"
+      ],
+      "proof": "work/thumb_alias_verification.json",
+      "report": "work/step19.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/plan_thumb_literals.py"
+      ],
+      "id": "20",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 20,
+      "prefixes": [
+        "work/step20.",
+        "work/step20_",
+        "work/thumb_literal_pilot",
+        "work/thumb_literal_plan",
+        "work/ghidra_thumb_literal_pilot"
+      ],
+      "proof": "work/thumb_literal_pilot_verification.json",
+      "report": "work/step20.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "21",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 21,
+      "prefixes": [
+        "work/step21.",
+        "work/step21_",
+        "work/thumb_literal_medium",
+        "work/ghidra_thumb_literal_medium"
+      ],
+      "proof": "work/thumb_literal_medium_scoped_verification.json",
+      "report": "work/step21.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "22",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 22,
+      "prefixes": [
+        "work/step22.",
+        "work/step22_",
+        "work/thumb_literal_large",
+        "work/ghidra_thumb_literal_large"
+      ],
+      "proof": "work/thumb_literal_large_scoped_verification.json",
+      "report": "work/step22.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "23",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 23,
+      "prefixes": [
+        "work/step23.",
+        "work/step23_",
+        "work/thumb_call_via",
+        "work/call_via",
+        "work/ghidra_thumb_call_via"
+      ],
+      "proof": "work/thumb_call_via_scoped_verification.json",
+      "report": "work/step23.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "24",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 24,
+      "prefixes": [
+        "work/step24.",
+        "work/step24_",
+        "work/thumb_inline_pilot",
+        "work/thumb_inline_plan",
+        "work/thumb_inline_planner",
+        "work/ghidra_thumb_inline_pilot"
+      ],
+      "proof": "work/thumb_inline_pilot_scoped_verification.json",
+      "report": "work/step24.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "25",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 25,
+      "prefixes": [
+        "work/step25.",
+        "work/step25_",
+        "work/thumb_inline_remaining",
+        "work/thumb_special_planner",
+        "work/ghidra_thumb_inline_remaining"
+      ],
+      "proof": "work/thumb_inline_remaining_scoped_verification.json",
+      "report": "work/step25.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/plan_thumb_inline.py",
+        "scripts/verify_thumb_recovery.py",
+        "work/thumb_aliases_with_call_via.json",
+        "work/thumb_inline_remaining_scoped_after/snapshot.json",
+        "work/thumb_special_pair_final_plan/plan.json"
+      ],
+      "id": "26",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 26,
+      "prefixes": [
+        "work/step26.",
+        "work/step26_",
+        "work/thumb_special_pair",
+        "work/ghidra_thumb_special_pair"
+      ],
+      "proof": "work/thumb_special_pair_scoped_verification.json",
+      "report": "work/step26.md",
+      "reviews": [
+        "work/thumb_special_pair_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_semantic_references.py",
+        "work/step27_gtc_findings.md",
+        "work/step27_independent_review.md",
+        "work/step27_reference_verification.json",
+        "work/thumb_special_pair_scoped_after/08012518_Func_12518.c"
+      ],
+      "id": "27",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 27,
+      "prefixes": [
+        "work/step27.",
+        "work/step27_"
+      ],
+      "proof": "work/step27_reference_verification.json",
+      "report": "work/step27.md",
+      "reviews": [
+        "work/step27_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_sprite_decode.py",
+        "work/step28_decode_verification.json",
+        "work/step28_independent_review.md",
+        "work/step28_modes_findings.md"
+      ],
+      "id": "28",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 28,
+      "prefixes": [
+        "work/step28.",
+        "work/step28_"
+      ],
+      "proof": "work/step28_decode_verification.json",
+      "report": "work/step28.md",
+      "reviews": [
+        "work/step28_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_sprite_decode.py",
+        "scripts/audit_sprite_upload.py",
+        "work/step29_upload_verification.json"
+      ],
+      "id": "29",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 29,
+      "prefixes": [
+        "work/step29.",
+        "work/step29_"
+      ],
+      "proof": "work/step29_upload_verification.json",
+      "report": "work/step29.md",
+      "reviews": [
+        "work/step29_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_sprite_rgb.py",
+        "work/step30_rgb_verification.json"
+      ],
+      "id": "30",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 30,
+      "prefixes": [
+        "work/step30.",
+        "work/step30_"
+      ],
+      "proof": "work/step30_rgb_verification.json",
+      "report": "work/step30.md",
+      "reviews": [
+        "work/step30_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_mgba_ppu.py",
+        "scripts/mgba31.c",
+        "scripts/probe_mgba31.py",
+        "work/step31_ppu_verification.json"
+      ],
+      "id": "31",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 31,
+      "prefixes": [
+        "work/step31.",
+        "work/step31_"
+      ],
+      "proof": "work/step31_ppu_verification.json",
+      "report": "work/step31.md",
+      "reviews": [
+        "work/step31_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [
+        "scripts/audit_html5_reference.py",
+        "work/step32_html5_verification.json"
+      ],
+      "id": "32",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 32,
+      "prefixes": [
+        "work/step32.",
+        "work/step32_"
+      ],
+      "proof": "work/step32_html5_verification.json",
+      "report": "work/step32.md",
+      "reviews": [
+        "work/step32_independent_review.md"
+      ],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "files": [],
+      "id": "33",
+      "notes": "Outcome retained; earlier project snapshots may be replaced. File status describes preservation, not proof validity.",
+      "number": 33,
+      "prefixes": [
+        "work/step33.",
+        "work/step33_"
+      ],
+      "proof": "work/step33_archive_verification.json",
+      "report": "work/step33.md",
+      "reviews": [],
+      "status": "retained"
+    },
+    {
+      "availability": "available",
+      "id": "21_attempt",
+      "notes": "Rejected annotation experiment; audit files retained as evidence, project not promoted.",
+      "number": 21,
+      "prefixes": [
+        "work/ghidra_thumb_literal_medium/",
+        "work/thumb_literal_medium_before/",
+        "work/thumb_literal_medium_after/",
+        "work/thumb_literal_medium_recovery/"
+      ],
+      "proof": "work/thumb_literal_medium_c_review.json",
+      "report": "work/step21_attempt.md",
+      "reviews": [],
+      "status": "rejected"
+    }
+  ]
+}

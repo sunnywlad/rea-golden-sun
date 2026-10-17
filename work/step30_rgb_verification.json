@@ -1,0 +1,102 @@
+{
+  "step": 30,
+  "rom_sha1": "5c4695205413df7db52b9a184815a07783999971",
+  "sources_sha256": {
+    "scripts/audit_sprite_rgb.py": "0c82f0a1771e3a4966d6d0a0f766e7b9e183aae6737d665abdcb38e7c0c2dc04",
+    "scripts/audit_sprite_upload.py": "5d09e713090d0f86f416f2048dda6e23fd662fead4bd7fff911968676d21c60f",
+    "scripts/audit_sprite_decode.py": "643fe30866dea3bb43b895f3fafe73ef4988ceb3bd469d1f67f61f770ea6fa6e",
+    "work/step28_decode_verification.json": "35155598284b162a015c9f27cf63878bba28a08d0cd4f610eeb6480f59f9f315",
+    "work/step29_upload_verification.json": "5951e5e942ac07d8fb1e96ded582d0594e951960aae70501fe0d147ed781879c"
+  },
+  "color_format": "BGR555 word: R bits0..4, G bits5..9, B bits10..14",
+  "channel_expansion": "floor(channel5 * 255 / 31), analytical choice",
+  "alpha": "index0 transparent, others opaque; hidden RGB preserved",
+  "affine_convention_source": "https://raw.githubusercontent.com/mgba-emu/mgba/master/src/gba/renderers/software-obj.c",
+  "affine_convention_lines": "221-222 and 30-34, consulted 2026-10-17",
+  "affine_centre": [
+    16,
+    16
+  ],
+  "cases": [
+    {
+      "heading": "0x0",
+      "frame": 1,
+      "mode": 0,
+      "width": 32,
+      "height": 32,
+      "tile_count": 16,
+      "vram_address_synthetic": "0x60100c0",
+      "tile_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "step28_indices_sha256": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "untiled_equals_step28": true,
+      "palette_entries": 224,
+      "palette_sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e",
+      "matrix_q8": [
+        256,
+        0,
+        0,
+        256
+      ],
+      "affine_enabled": false,
+      "sampling_outside_texture_pixels": 0,
+      "indices_sha256_after_transform": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "rgba_sha256": "aad3b1161c9358b34b4895203531f9ccce9e05d554cd0a8cba77dd7c42316a12",
+      "rgba_reference_sha256": "aad3b1161c9358b34b4895203531f9ccce9e05d554cd0a8cba77dd7c42316a12",
+      "index_mismatches": 0,
+      "rgba_pixel_mismatches": 0,
+      "nonzero_pixels": 258,
+      "opaque_colors": 42,
+      "transparent_pixels": 766,
+      "ordinary_flip_mismatches": null,
+      "affine_equals_flip_shifted_right_one": null,
+      "private_png_name": "spr000_frame1_mode0_dir0000.png",
+      "png_sha256": "53e4232dbb18b7d254c18b1bb5cfed222912d8cdc066932149644287f170581f",
+      "png_bytes": 488
+    },
+    {
+      "heading": "0x8000",
+      "frame": 1,
+      "mode": 0,
+      "width": 32,
+      "height": 32,
+      "tile_count": 16,
+      "vram_address_synthetic": "0x60100c0",
+      "tile_sha256": "6c873b8165bf02dd8ecc18244e54f4bbd1d16773f1fa3ab2851c03665d9c85a9",
+      "step28_indices_sha256": "f01624f44bdb1e51b5deb68f5d73b17188c158e4fd9a2a9f2e19fd4f2e3798ae",
+      "untiled_equals_step28": true,
+      "palette_entries": 224,
+      "palette_sha256": "c0fdc449509d31d4df26babcfdfc2bdc4e08dafe550cbf71966c8b09d9883e7e",
+      "matrix_q8": [
+        -256,
+        0,
+        0,
+        256
+      ],
+      "affine_enabled": true,
+      "sampling_outside_texture_pixels": 32,
+      "indices_sha256_after_transform": "e066e5050fa6708b41db872973ccca7d5e59134e74c486b2602d4dd5b4f9c225",
+      "rgba_sha256": "a4a6da84ec5ac23ab781a63383e5e14c48ed1d3409883909229f44ef9696dd69",
+      "rgba_reference_sha256": "a4a6da84ec5ac23ab781a63383e5e14c48ed1d3409883909229f44ef9696dd69",
+      "index_mismatches": 0,
+      "rgba_pixel_mismatches": 0,
+      "nonzero_pixels": 258,
+      "opaque_colors": 42,
+      "transparent_pixels": 766,
+      "ordinary_flip_mismatches": 246,
+      "affine_equals_flip_shifted_right_one": true,
+      "private_png_name": "spr000_frame1_mode0_dir8000.png",
+      "png_sha256": "4d3058e2b81b9c43be65008c2391bffb92180ba7818660c72d0fe1d5672ccfb4",
+      "png_bytes": 478
+    }
+  ],
+  "ghidra_started": false,
+  "ghidra_mutated": false,
+  "limits": [
+    "Analytical object RGBA reconstruction, no PPU or game execution",
+    "Synthetic objects, layer, heap, cache, slots and VBlank flags",
+    "Immediate DMA simulated, inherited unaligned LDM shims",
+    "Assumed 1D OBJ tile mapping, no DISPCNT execution",
+    "No blending, fading, mosaic, scene composition or LCD color model",
+    "Local private PNGs only; no image/ROM/payload published"
+  ]
+}

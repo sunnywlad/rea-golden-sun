@@ -1,0 +1,124 @@
+{
+  "recorded_at_utc": "2026-10-16T21:15:52.460215+00:00",
+  "purpose": "Local read-only references for Golden Sun semantic reverse engineering; no change to the validated Ghidra project.",
+  "repositories": [
+    {
+      "name": "alchemy",
+      "path": "external/alchemy",
+      "origin": "https://github.com/PascalPixel/alchemy.git",
+      "commit": "1517ff0750d988f570b6efcd06bf30d0f64c9d2a",
+      "branch": "main",
+      "shallow": true,
+      "partial_clone_filter": "blob:none",
+      "sparse_paths": [
+        "games/common/include",
+        "games/tbs/include",
+        "games/tbs/src/debug",
+        "games/tbs/src/field",
+        "games/tbs/src/graphics",
+        "games/tbs/src/object",
+        "games/tbs/src/system/resource",
+        "tools/ags-graphics"
+      ],
+      "working_tree_clean": true,
+      "submodules_initialized": false,
+      "dependencies_installed": false,
+      "build_run": false
+    },
+    {
+      "name": "game-tools-collection",
+      "path": "external/game-tools-collection",
+      "origin": "https://github.com/RyudoSynbios/game-tools-collection.git",
+      "commit": "ea0efd9b161fd39308e61ce180d409c7b11613cf",
+      "branch": "master",
+      "shallow": true,
+      "partial_clone_filter": "blob:none",
+      "sparse_paths": [
+        "src/lib/templates/golden-sun",
+        "src/lib/templates/golden-sun-the-lost-age",
+        "src/lib/types",
+        "src/lib/utils"
+      ],
+      "working_tree_clean": true,
+      "submodules_initialized": false,
+      "dependencies_installed": false,
+      "build_run": false
+    },
+    {
+      "name": "goldensun_html5",
+      "path": "external/goldensun_html5",
+      "origin": "https://github.com/jjppof/goldensun_html5.git",
+      "commit": "b8b086dc4a15025778acd1ce861c4ef7d6fda426",
+      "branch": "master",
+      "shallow": true,
+      "partial_clone_filter": "blob:none",
+      "sparse_mode": "non-cone, exact root files and code directories",
+      "sparse_paths": [
+        "/LICENSE.txt",
+        "/README.md",
+        "/package.json",
+        "/tsconfig.json",
+        "/base/",
+        "/types/",
+        "/assets/filters/",
+        "/.gitattributes",
+        "/.gitignore"
+      ],
+      "working_tree_clean": true,
+      "submodules_initialized": false,
+      "dependencies_installed": false,
+      "build_run": false,
+      "game_media_or_database_assets_downloaded": false,
+      "assets_exception": "assets/filters contains JavaScript/GLSL shader source only; no images, audio, atlas JSON or game databases",
+      "license": "MIT, Copyright (c) 2020 Joao Paulo Oliveira Fernandes",
+      "license_scope_note": "Source software and documentation; retain copyright and permission notice in copies/substantial portions. README reserves Golden Sun media rights to Nintendo/Camelot.",
+      "rules": {
+        "agents_or_claude_or_contributing_files_in_tree": [],
+        "read": ["LICENSE.txt", "README.md", ".gitattributes"],
+        "developer_guidelines_url": "https://github.com/jjppof/goldensun_html5/wiki/Introduction-for-developers",
+        "wiki_consulted_on": "2026-10-17",
+        "wiki_revision_pinned": false,
+        "external_source_edits": false
+      },
+      "authority": "Independent Phaser CE 2.19.0 engine recreation, not ROM decompilation or proof of byte/pixel equivalence",
+      "recorded_on": "2026-10-17"
+    }
+  ],
+  "local_rom_sha1_listed_by_alchemy": "5c4695205413df7db52b9a184815a07783999971",
+  "alchemy_build_claim_independently_verified": false,
+  "editor_identity": "RyudoSynbios Game Tools Collection; distinct from historical Atrius editor. Its deprecated golden-sun-editor repository points here.",
+  "last_audited_at_utc": "2026-10-16T21:29:47.272269+00:00",
+  "last_comparative_audit": {
+    "step": 32,
+    "date": "2026-10-17",
+    "report": "work/step32.md",
+    "verification": "work/step32_html5_verification.json",
+    "independent_review": "work/step32_independent_review.md",
+    "ghidra_started": false,
+    "ghidra_mutated": false,
+    "external_build_run": false,
+    "pixel_or_rom_equivalence_claimed": false
+  },
+  "semantic_audit": {
+    "step": 27,
+    "report": "work/step27.md",
+    "verification": "work/step27_reference_verification.json",
+    "independent_review": "work/step27_independent_review.md",
+    "ghidra_started": false,
+    "ghidra_mutated": false,
+    "external_build_run": false,
+    "facts": {
+      "metadata_records_compared": 512,
+      "scalar_fields_compared": 4608,
+      "animation_counts_compared": 512,
+      "animation_slots_compared": 2062,
+      "mismatches": 0
+    },
+    "limits": [
+      "No complete Alchemy build verified",
+      "No game or editor execution",
+      "Frame payloads not reconstructed",
+      "No automatic Ghidra name or type import"
+    ]
+  }
+}

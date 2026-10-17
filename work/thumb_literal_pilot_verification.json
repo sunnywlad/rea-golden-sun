@@ -1,0 +1,106 @@
+{
+  "verified": true,
+  "created": 15,
+  "before_functions": 2315,
+  "after_functions": 2330,
+  "added_instructions": 100,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "approved_literal_slots": 21,
+  "new_literal_data_units": 21,
+  "targets": [
+    {
+      "name": "Func_5e70",
+      "body_bytes": 18,
+      "instructions": 9,
+      "warnings": 0
+    },
+    {
+      "name": "Func_108c4",
+      "body_bytes": 22,
+      "instructions": 11,
+      "warnings": 0
+    },
+    {
+      "name": "Func_118a8",
+      "body_bytes": 18,
+      "instructions": 9,
+      "warnings": 0
+    },
+    {
+      "name": "Func_118c0",
+      "body_bytes": 18,
+      "instructions": 9,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1e738",
+      "body_bytes": 12,
+      "instructions": 6,
+      "warnings": 0
+    },
+    {
+      "name": "Func_793c8",
+      "body_bytes": 10,
+      "instructions": 5,
+      "warnings": 0
+    },
+    {
+      "name": "Func_8b854",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 0
+    },
+    {
+      "name": "Func_917c4",
+      "body_bytes": 8,
+      "instructions": 4,
+      "warnings": 0
+    },
+    {
+      "name": "Func_91e9c",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a2408",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a2420",
+      "body_bytes": 14,
+      "instructions": 7,
+      "warnings": 0
+    },
+    {
+      "name": "Func_b5b08",
+      "body_bytes": 8,
+      "instructions": 4,
+      "warnings": 0
+    },
+    {
+      "name": "Func_bb8d8",
+      "body_bytes": 10,
+      "instructions": 5,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f94f8",
+      "body_bytes": 10,
+      "instructions": 5,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f9538",
+      "body_bytes": 10,
+      "instructions": 5,
+      "warnings": 0
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}

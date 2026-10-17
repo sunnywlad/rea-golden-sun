@@ -1,0 +1,11 @@
+{
+  "before_matches_step25": true,
+  "memory_unchanged": true,
+  "old_functions_changed": [],
+  "old_instructions_changed": [],
+  "old_data_changed": [],
+  "new_data_outside_pools": [
+    "0x3001c90"
+  ],
+  "new_data_count": 17
+}

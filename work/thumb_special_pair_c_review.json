@@ -1,0 +1,50 @@
+{
+  "targets": [
+    {
+      "name": "Func_12518",
+      "completed": true,
+      "warnings": 0,
+      "wide_with_lr_suspect": false
+    },
+    {
+      "name": "Func_fa674",
+      "completed": true,
+      "warnings": 0,
+      "wide_with_lr_suspect": false
+    }
+  ],
+  "reviewed_source_samples": [
+    "Func_12518",
+    "Func_fa674"
+  ],
+  "Func_12518_checks": {
+    "four_descriptor_initialization_entries": true,
+    "ten_render_entries": true,
+    "register_writes_05000000_04000000": true,
+    "DMA3_triple_writes": true,
+    "control_state_0_to_3_branches": true,
+    "exports_table_literal": "0x08185000",
+    "exports_literal_slot": "0x08012af4",
+    "exports_base_is_even": true,
+    "exports_call_uses_inferred_names_and_prototypes": true,
+    "no_return_epilogue_in_source": true
+  },
+  "Func_fa674_checks": {
+    "source_swi_immediate": "0x2a",
+    "opcode_bytes": "2adf",
+    "return_opcode_bytes": "7047",
+    "c_preserves_software_interrupt": true,
+    "BIOS_semantics_and_ABI_established": false
+  },
+  "semantic_equivalence_of_all_c_established": false,
+  "source_references": [
+    "work/repo/rom_9000/src/rom_1219c.s:438-1193",
+    "work/repo/rom_f9000/src/rom_f9ef8.s:958-961",
+    "work/repo/rom_185000/src/exports.s:3-6"
+  ],
+  "caveats": [
+    "No C semantic-equivalence proof; callee prototypes remain inferred.",
+    "Func_12518 C represents stack descriptors as inferred locals and indexed arrays.",
+    "software_interrupt(0x2a) leaves BIOS effects and ABI opaque."
+  ]
+}

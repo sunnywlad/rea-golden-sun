@@ -1,0 +1,437 @@
+{
+  "validated_project": "work/ghidra_thumb_inline_remaining_scoped/step9.gpr",
+  "function_count": 2591,
+  "reference_found": 2221,
+  "reference_total": 2253,
+  "remaining": 32,
+  "entries": [
+    {
+      "name": "Func_94544",
+      "address": "0x8094544",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_8a000/src/rom_944ec.s",
+          "line": 38
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_949a8",
+      "address": "0x80949a8",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_8a000/src/rom_944ec.s",
+          "line": 567
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_b81c8",
+      "address": "0x80b81c8",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_b5000/src/rom_b7410.s",
+          "line": 1805
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_a4924",
+      "address": "0x80a4924",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_a1000/src/rom_a47b4.s",
+          "line": 171
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_1cbd4",
+      "address": "0x801cbd4",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_15000/src/rom_1ca1c.s",
+          "line": 168
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_26080",
+      "address": "0x8026080",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_15000/src/rom_23178.s",
+          "line": 5766
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_20f4",
+      "address": "0x80020f4",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_1b70.s",
+          "line": 395
+        }
+      ],
+      "remaining_group": "ordinary_ARM_ROM"
+    },
+    {
+      "name": "Func_770",
+      "address": "0x8000770",
+      "mode": "arm",
+      "category": "decoded_entry_unowned",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 3
+        }
+      ],
+      "runtime_address": "0x3000000",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_888",
+      "address": "0x8000888",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 81
+        }
+      ],
+      "runtime_address": "0x3000118",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_89c",
+      "address": "0x800089c",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 89
+        }
+      ],
+      "runtime_address": "0x300012c",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_8d4",
+      "address": "0x80008d4",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 109
+        }
+      ],
+      "runtime_address": "0x3000164",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_8d8",
+      "address": "0x80008d8",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 111
+        }
+      ],
+      "runtime_address": "0x3000168",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_948",
+      "address": "0x8000948",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 146
+        }
+      ],
+      "runtime_address": "0x30001d8",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_984",
+      "address": "0x8000984",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 165
+        }
+      ],
+      "runtime_address": "0x3000214",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_b50",
+      "address": "0x8000b50",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 295
+        }
+      ],
+      "runtime_address": "0x30003e0",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_b60",
+      "address": "0x8000b60",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 302
+        }
+      ],
+      "runtime_address": "0x30003f0",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_d30",
+      "address": "0x8000d30",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 430
+        }
+      ],
+      "runtime_address": "0x30005c0",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_dc8",
+      "address": "0x8000dc8",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 476
+        }
+      ],
+      "runtime_address": "0x3000658",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_1af8",
+      "address": "0x8001af8",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_770.s",
+          "line": 1085
+        }
+      ],
+      "runtime_address": "0x3001388",
+      "remaining_group": "rom_770_storage_with_IWRAM_runtime"
+    },
+    {
+      "name": "Func_404",
+      "address": "0x8000404",
+      "mode": "arm",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/crt0.s",
+          "line": 29
+        }
+      ],
+      "remaining_group": "ordinary_ARM_ROM"
+    },
+    {
+      "name": "Func_a414c",
+      "address": "0x80a414c",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_a1000/src/rom_a1814.s",
+          "line": 5030
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_6abc",
+      "address": "0x8006abc",
+      "mode": "thumb",
+      "category": "defined_data",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_6878.s",
+          "line": 254
+        }
+      ],
+      "remaining_group": "code_and_data"
+    },
+    {
+      "name": "Func_6b84",
+      "address": "0x8006b84",
+      "mode": "thumb",
+      "category": "defined_data",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_6878.s",
+          "line": 359
+        }
+      ],
+      "remaining_group": "code_and_data"
+    },
+    {
+      "name": "Func_6c24",
+      "address": "0x8006c24",
+      "mode": "thumb",
+      "category": "defined_data",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_6878.s",
+          "line": 438
+        }
+      ],
+      "remaining_group": "code_and_data"
+    },
+    {
+      "name": "Func_6f48",
+      "address": "0x8006f48",
+      "mode": "thumb",
+      "category": "defined_data",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_6878.s",
+          "line": 813
+        }
+      ],
+      "remaining_group": "code_and_data"
+    },
+    {
+      "name": "Func_fa674",
+      "address": "0x80fa674",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_f9000/src/rom_f9ef8.s",
+          "line": 958
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_4ab0",
+      "address": "0x8004ab0",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_49a8.s",
+          "line": 113
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_4e54",
+      "address": "0x8004e54",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_c0/src/rom_49a8.s",
+          "line": 501
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_f3078",
+      "address": "0x80f3078",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_f2000/src/rom_f2028.s",
+          "line": 1898
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_f95f0",
+      "address": "0x80f95f0",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_f9000/src/rom_f95e0.s",
+          "line": 16
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_f9674",
+      "address": "0x80f9674",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_f9000/src/rom_f95e0.s",
+          "line": 89
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    },
+    {
+      "name": "Func_12518",
+      "address": "0x8012518",
+      "mode": "thumb",
+      "category": "undefined_executable",
+      "definitions": [
+        {
+          "path": "rom_9000/src/rom_1219c.s",
+          "line": 438
+        }
+      ],
+      "remaining_group": "ordinary_Thumb_ROM"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "changed_returns": [
+    "0x80c9ca6",
+    "0x80d527e",
+    "0x80d8992",
+    "0x80d9ae6"
+  ],
+  "raw_pcode_bytes_modes_prototypes_memory_and_bodies_preserved": true,
+  "automatic_equals_manual_c": true,
+  "reopened_state_and_c_identical": true,
+  "caveat": "C return unaff_lr is an inferred prototype, not a validated source-level return type"
+}

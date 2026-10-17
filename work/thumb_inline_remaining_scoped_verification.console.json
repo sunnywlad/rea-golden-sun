@@ -1,0 +1,226 @@
+{
+  "verified": true,
+  "created": 35,
+  "before_functions": 2556,
+  "after_functions": 2591,
+  "added_instructions": 10323,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "approved_literal_slots": 589,
+  "new_literal_data_units": 577,
+  "targets": [
+    {
+      "name": "Func_5d10",
+      "body_bytes": 252,
+      "instructions": 123,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1a7f4",
+      "body_bytes": 264,
+      "instructions": 129,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1a98c",
+      "body_bytes": 1254,
+      "instructions": 612,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1aeec",
+      "body_bytes": 250,
+      "instructions": 122,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1c7fc",
+      "body_bytes": 160,
+      "instructions": 77,
+      "warnings": 0
+    },
+    {
+      "name": "Func_1f77c",
+      "body_bytes": 122,
+      "instructions": 58,
+      "warnings": 0
+    },
+    {
+      "name": "Func_20bd8",
+      "body_bytes": 1100,
+      "instructions": 506,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2106c",
+      "body_bytes": 406,
+      "instructions": 183,
+      "warnings": 0
+    },
+    {
+      "name": "Func_24934",
+      "body_bytes": 1988,
+      "instructions": 946,
+      "warnings": 0
+    },
+    {
+      "name": "Func_25200",
+      "body_bytes": 1662,
+      "instructions": 770,
+      "warnings": 0
+    },
+    {
+      "name": "Func_2592c",
+      "body_bytes": 1706,
+      "instructions": 794,
+      "warnings": 0
+    },
+    {
+      "name": "Func_28c04",
+      "body_bytes": 338,
+      "instructions": 142,
+      "warnings": 0
+    },
+    {
+      "name": "Func_77f70",
+      "body_bytes": 264,
+      "instructions": 115,
+      "warnings": 0
+    },
+    {
+      "name": "Func_7a664",
+      "body_bytes": 284,
+      "instructions": 135,
+      "warnings": 0
+    },
+    {
+      "name": "Func_94820",
+      "body_bytes": 358,
+      "instructions": 174,
+      "warnings": 0
+    },
+    {
+      "name": "Func_94ac8",
+      "body_bytes": 204,
+      "instructions": 93,
+      "warnings": 0
+    },
+    {
+      "name": "Func_94bbc",
+      "body_bytes": 450,
+      "instructions": 218,
+      "warnings": 0
+    },
+    {
+      "name": "Func_94da0",
+      "body_bytes": 182,
+      "instructions": 83,
+      "warnings": 0
+    },
+    {
+      "name": "Func_94e7c",
+      "body_bytes": 488,
+      "instructions": 235,
+      "warnings": 0
+    },
+    {
+      "name": "Func_9509c",
+      "body_bytes": 164,
+      "instructions": 74,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a38d0",
+      "body_bytes": 754,
+      "instructions": 343,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a3c08",
+      "body_bytes": 122,
+      "instructions": 58,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a4f08",
+      "body_bytes": 642,
+      "instructions": 284,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a7380",
+      "body_bytes": 178,
+      "instructions": 77,
+      "warnings": 0
+    },
+    {
+      "name": "Func_b5368",
+      "body_bytes": 448,
+      "instructions": 210,
+      "warnings": 0
+    },
+    {
+      "name": "Func_cb4ec",
+      "body_bytes": 680,
+      "instructions": 320,
+      "warnings": 0
+    },
+    {
+      "name": "Func_d0468",
+      "body_bytes": 362,
+      "instructions": 175,
+      "warnings": 0
+    },
+    {
+      "name": "Func_d5e54",
+      "body_bytes": 1624,
+      "instructions": 747,
+      "warnings": 1
+    },
+    {
+      "name": "Func_dc454",
+      "body_bytes": 566,
+      "instructions": 265,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f0538",
+      "body_bytes": 178,
+      "instructions": 89,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f0678",
+      "body_bytes": 300,
+      "instructions": 146,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f2028",
+      "body_bytes": 1004,
+      "instructions": 496,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f24a0",
+      "body_bytes": 426,
+      "instructions": 209,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f26ec",
+      "body_bytes": 940,
+      "instructions": 438,
+      "warnings": 0
+    },
+    {
+      "name": "Func_f7f78",
+      "body_bytes": 1764,
+      "instructions": 877,
+      "warnings": 0
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}
