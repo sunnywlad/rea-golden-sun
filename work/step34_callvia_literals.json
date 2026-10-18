@@ -1,0 +1,218 @@
+[
+  {
+    "address": "0x8004bcc",
+    "value": 50331928,
+    "bytes": "18010003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8004bcc",
+      "end": "0x8004bcf",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8004bd0",
+    "value": 50332352,
+    "bytes": "c0020003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8004bd0",
+      "end": "0x8004bd3",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8004fdc",
+    "value": 50331928,
+    "bytes": "18010003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8004fdc",
+      "end": "0x8004fdf",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8004fe0",
+    "value": 50332352,
+    "bytes": "c0020003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8004fe0",
+      "end": "0x8004fe3",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x801cc44",
+    "value": 1398,
+    "bytes": "76050000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x801cc44",
+      "end": "0x801cc47",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x801cc48",
+    "value": 50331928,
+    "bytes": "18010003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x801cc48",
+      "end": "0x801cc4b",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x801cc4c",
+    "value": 1402,
+    "bytes": "7a050000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x801cc4c",
+      "end": "0x801cc4f",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094710",
+    "value": 50339544,
+    "bytes": "d81e0003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094710",
+      "end": "0x8094713",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094714",
+    "value": 50338512,
+    "bytes": "d01a0003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094714",
+      "end": "0x8094717",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094718",
+    "value": 3842,
+    "bytes": "020f0000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094718",
+      "end": "0x809471b",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x809471c",
+    "value": 3864,
+    "bytes": "180f0000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x809471c",
+      "end": "0x809471f",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094720",
+    "value": 50331928,
+    "bytes": "18010003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094720",
+      "end": "0x8094723",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094724",
+    "value": 134868356,
+    "bytes": "84ed0908",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094724",
+      "end": "0x8094727",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x8094728",
+    "value": 3860,
+    "bytes": "140f0000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x8094728",
+      "end": "0x809472b",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x809472c",
+    "value": 3868,
+    "bytes": "1c0f0000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x809472c",
+      "end": "0x809472f",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x80b821c",
+    "value": 39321,
+    "bytes": "99990000",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x80b821c",
+      "end": "0x80b821f",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x80b8220",
+    "value": 50331928,
+    "bytes": "18010003",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x80b8220",
+      "end": "0x80b8223",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  },
+  {
+    "address": "0x80b8224",
+    "value": 85196,
+    "bytes": "cc4c0100",
+    "instruction_overlap": false,
+    "data_unit": {
+      "start": "0x80b8224",
+      "end": "0x80b8227",
+      "length": 4,
+      "type": "/undefined4"
+    }
+  }
+]

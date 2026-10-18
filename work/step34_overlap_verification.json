@@ -1,0 +1,77 @@
+{
+  "verified": true,
+  "before_functions": 2617,
+  "after_functions": 2621,
+  "created_functions": [
+    "0x8006abc",
+    "0x8006b84",
+    "0x8006c24",
+    "0x8006f48"
+  ],
+  "added_instructions": 62,
+  "removed_preexisting_data_units": [
+    "0x8006abc",
+    "0x8006b84",
+    "0x8006c24",
+    "0x8006f48"
+  ],
+  "all_removed_units_were_source_proven_undefined2_at_entries": true,
+  "memory_and_old_functions_instructions_unchanged": true,
+  "all_target_bytes_match_pinned_rom": true,
+  "reopened_snapshot_identical": true,
+  "targets": [
+    {
+      "name": "Func_6abc",
+      "body_ranges": [
+        {
+          "start": "0x8006abc",
+          "end": "0x8006abf"
+        }
+      ],
+      "instructions": 2,
+      "thumb_bytes_match_pinned_rom": true
+    },
+    {
+      "name": "Func_6b84",
+      "body_ranges": [
+        {
+          "start": "0x8006b84",
+          "end": "0x8006ba5"
+        }
+      ],
+      "instructions": 17,
+      "thumb_bytes_match_pinned_rom": true
+    },
+    {
+      "name": "Func_6c24",
+      "body_ranges": [
+        {
+          "start": "0x8006c24",
+          "end": "0x8006c4b"
+        },
+        {
+          "start": "0x8006c54",
+          "end": "0x8006c65"
+        }
+      ],
+      "instructions": 29,
+      "thumb_bytes_match_pinned_rom": true
+    },
+    {
+      "name": "Func_6f48",
+      "body_ranges": [
+        {
+          "start": "0x8006f48",
+          "end": "0x8006f51"
+        },
+        {
+          "start": "0x8006f58",
+          "end": "0x8006f69"
+        }
+      ],
+      "instructions": 14,
+      "thumb_bytes_match_pinned_rom": true
+    }
+  ],
+  "caveat": "Four undefined2 entries were replaced by source-defined Thumb code; literal-pool gaps remain outside function bodies."
+}

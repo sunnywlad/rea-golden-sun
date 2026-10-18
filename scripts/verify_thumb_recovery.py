@@ -73,6 +73,17 @@ def main():
                     assert match,("unresolved branch label",row["name"],source)
                     target=hex(0x08000000+int(match[1],16))
                 assert target in ins["flows"],(row["name"],source,ins["flows"])
+        by_plan_address={ins["address"]:ins for ins in row["instructions"]}
+        literal_by_instruction={lit["instruction"]:lit for lit in row.get("literals",[])}
+        for tail in row.get("verified_tail_calls",[]):
+            branch=by_plan_address[tail["instruction"]]
+            assert re.sub(r"\s+"," ",branch["source"]).strip()=="bx r3" and tail["kind"]=="source-verified IWRAM tail transfer"
+            assert int(tail["target_pointer"],16)&~1==int(tail["target"],16)==0x03007000
+            previous=by_plan_address[hex(int(tail["instruction"],16)-2)]
+            assert re.sub(r"\s+"," ",previous["source"]).strip().startswith("ldr r3,")
+            literal=literal_by_instruction[previous["address"]]
+            assert int(literal["value"],16)==int(tail["target_pointer"],16)
+            assert row.get("literal_word_expressions",{}).get(literal["address"])=="iwram_7001"
         filename=f'{int(row["address"],16):08x}_{row["name"]}.c'
         assert (args.after/filename).read_bytes()==(args.reopened/filename).read_bytes()
         checks.append(dict(name=row["name"],body_bytes=actual["body_size"],

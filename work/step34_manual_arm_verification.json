@@ -1,0 +1,39 @@
+{
+  "verified": true,
+  "before_functions": 2614,
+  "after_functions": 2617,
+  "created_functions": [
+    "0x8000770",
+    "0x80008d8",
+    "0x8001af8"
+  ],
+  "new_instructions": 58,
+  "memory_and_defined_data_unchanged": true,
+  "old_functions_and_instructions_unchanged": true,
+  "all_target_instruction_bytes_match_pinned_rom": true,
+  "reopened_snapshot_identical": true,
+  "targets": [
+    {
+      "name": "Func_770",
+      "body_bytes": 224,
+      "instructions": 56,
+      "mode": "ARM",
+      "rom_bytes_match": true
+    },
+    {
+      "name": "Func_8d8",
+      "body_bytes": 112,
+      "instructions": 28,
+      "mode": "ARM",
+      "rom_bytes_match": true
+    },
+    {
+      "name": "Func_1af8",
+      "body_bytes": 120,
+      "instructions": 30,
+      "mode": "ARM",
+      "rom_bytes_match": true
+    }
+  ],
+  "caveat": "Func_770 source data islands were excluded from its code body and remain unmodified."
+}

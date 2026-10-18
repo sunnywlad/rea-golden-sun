@@ -11,7 +11,7 @@ import java.security.MessageDigest;
 import java.util.*;
 import java.util.regex.*;
 
-/** Apply only reviewed return overrides and trailing-pool definitions; never run analysis or clear code/data. */
+/** Apply only reviewed return/call overrides and pool definitions; never run analysis or clear code/data. */
 public class ApplyApprovedAnalysis extends GhidraScript {
   private static final Pattern RETURN=Pattern.compile("bx\\s+(r[0-7])");
   @Override public void run() throws Exception {
@@ -20,10 +20,11 @@ public class ApplyApprovedAnalysis extends GhidraScript {
     byte[] planBytes=Files.readAllBytes(Paths.get(args[0]));
     JsonObject plan=JsonParser.parseString(new String(planBytes,java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
     JsonObject evidence=JsonParser.parseString(Files.readString(Paths.get(args[1]))).getAsJsonObject();
-    require("approved-thumb-returns-v1".equals(evidence.get("schema").getAsString()),"unsupported evidence schema");
+    require("approved-thumb-analysis-v2".equals(evidence.get("schema").getAsString()),"unsupported evidence schema");
     require(hexBytes(MessageDigest.getInstance("SHA-256").digest(planBytes)).equals(evidence.get("plan_sha256").getAsString()),"evidence belongs to another plan");
     Map<String,JsonObject> sources=new HashMap<>(),previous=new HashMap<>();
     Map<String,Address> owners=new HashMap<>();Map<Address,Long> slots=new TreeMap<>();
+    Map<String,JsonObject> plannedCalls=new HashMap<>();
     Set<String> entries=new HashSet<>();
     // Complete preflight before ANY mutation, including every pool value and overlap.
     for(JsonElement element:plan.getAsJsonArray("targets")) {
@@ -35,6 +36,11 @@ public class ApplyApprovedAnalysis extends GhidraScript {
       AddressSet expectedBody=expectedBody(row,entry);
       require(new AddressSet(f.getBody()).equals(expectedBody)&&f.getBody().getNumAddresses()==row.get("code_bytes").getAsLong(),"body mismatch "+entry);
       JsonArray instructions=row.getAsJsonArray("instructions");Address cursor=entry;JsonObject prev=null;AddressSet planned=new AddressSet();
+      for(JsonElement callElement:row.has("call_via_calls")?row.getAsJsonArray("call_via_calls"):new JsonArray()) {
+        JsonObject call=callElement.getAsJsonObject();String key=call.get("bx").getAsString();
+        require(!plannedCalls.containsKey(key),"duplicate planned .call_via site "+key);
+        plannedCalls.put(key,call);
+      }
       for(JsonElement item:instructions) {
         JsonObject source=item.getAsJsonObject();Address a=toAddr(source.get("address").getAsString());Instruction ins=getInstructionAt(a);
         require((row.has("body_ranges")?a.compareTo(cursor)>=0:a.equals(cursor))&&!sources.containsKey(hex(a)),"out-of-order/duplicate instruction "+a);
@@ -78,13 +84,39 @@ public class ApplyApprovedAnalysis extends GhidraScript {
       if(ins.getFlowOverride()==FlowOverride.RETURN)require(pcode(ins,true).equals(effective),"existing return P-code mismatch "+a);
       approved.put(a,row);
     }
+    Map<Address,JsonObject> approvedCalls=new TreeMap<>();
+    for(JsonElement element:evidence.getAsJsonArray("calls")) {
+      JsonObject row=element.getAsJsonObject();Address a=toAddr(row.get("address").getAsString());String key=hex(a);
+      require(!approvedCalls.containsKey(a)&&sources.containsKey(key),"duplicate/out-of-plan .call_via "+a);
+      require(owners.get(key).equals(toAddr(row.get("entry").getAsString())),"wrong .call_via owner "+a);
+      JsonObject call=plannedCalls.get(key);require(call!=null,".call_via evidence is not in approved plan "+a);
+      require("CALL".equals(row.get("override").getAsString())&&"1".equals(row.get("tmode").getAsString()),"unapproved call override/mode "+a);
+      Instruction ins=getInstructionAt(a);require(hexBytes(ins.getBytes()).equals(row.get("bytes").getAsString())&&tmode(a).equals("1"),".call_via evidence bytes/mode mismatch "+a);
+      require(ins.getFlowOverride()==FlowOverride.NONE||ins.getFlowOverride()==FlowOverride.CALL,"existing different override at .call_via "+a);
+      checkCallVia(sources.get(key),sources.get(hex(toAddr(call.get("move").getAsString()))),ins,call);
+      List<String> raw=pcode(ins,false),effective=strings(row.getAsJsonArray("effective_pcode"));
+      require(raw.equals(strings(row.getAsJsonArray("raw_pcode"))),".call_via raw P-code mismatch "+a);
+      require(callPcode(raw).equals(effective),"unapproved .call_via effective P-code "+a);
+      if(ins.getFlowOverride()==FlowOverride.CALL)require(pcode(ins,true).equals(effective),"existing .call_via P-code mismatch "+a);
+      approvedCalls.put(a,row);
+    }
+    require(approvedCalls.keySet().equals(new TreeSet<Address>(plannedCalls.keySet().stream().map(this::toAddr).toList())),
+      "approved .call_via overrides do not match plan");
     // An idempotent rerun may already contain these approved overrides, and no others.
     for(String key:sources.keySet()) {
       Instruction i=getInstructionAt(toAddr(key));
-      require(i.getFlowOverride()==FlowOverride.NONE||(i.getFlowOverride()==FlowOverride.RETURN&&approved.containsKey(i.getAddress())),"override outside approved evidence "+key);
+      require(i.getFlowOverride()==FlowOverride.NONE||
+        (i.getFlowOverride()==FlowOverride.RETURN&&approved.containsKey(i.getAddress()))||
+        (i.getFlowOverride()==FlowOverride.CALL&&approvedCalls.containsKey(i.getAddress())),"override outside approved evidence "+key);
     }
     Map<String,List<String>> functionsBefore=functions();Map<Address,String> dataBefore=data();
     int applied=0,existing=0;
+    for(Address a:approvedCalls.keySet()) {
+      monitor.checkCancelled();Instruction ins=getInstructionAt(a);
+      if(ins.getFlowOverride()==FlowOverride.CALL)existing++;
+      else {ins.setFlowOverride(FlowOverride.CALL);applied++;}
+      require(pcode(ins,true).equals(strings(approvedCalls.get(a).getAsJsonArray("effective_pcode"))),"applied .call_via P-code mismatch "+a);
+    }
     for(Address a:approved.keySet()) {
       monitor.checkCancelled();Instruction ins=getInstructionAt(a);
       if(ins.getFlowOverride()==FlowOverride.RETURN)existing++;
@@ -101,7 +133,7 @@ public class ApplyApprovedAnalysis extends GhidraScript {
     require(added.equals(new HashSet<>(newData)),"unexpected new data units");
     for(Address a:newData) {Data d=currentProgram.getListing().getDefinedDataAt(a);require(d!=null&&d.getLength()==4&&d.getDataType().getPathName().equals(Undefined4DataType.dataType.getPathName()),"wrong new literal data "+a);}
     for(Map.Entry<Address,Long> slot:slots.entrySet())require(Integer.toUnsignedLong(currentProgram.getMemory().getInt(slot.getKey()))==slot.getValue(),"literal bytes changed");
-    println("APPLY_APPROVED returns_applied="+applied+" returns_preexisting="+existing+" literal_units_created="+newData.size()+" literal_slots_preserved="+(slots.size()-newData.size()));
+    println("APPLY_APPROVED overrides_applied="+applied+" overrides_preexisting="+existing+" literal_units_created="+newData.size()+" literal_slots_preserved="+(slots.size()-newData.size()));
   }
   private AddressSet expectedBody(JsonObject row,Address entry) {
     Address end=toAddr(row.get("code_end").getAsString());AddressSet result=new AddressSet();
@@ -119,12 +151,24 @@ public class ApplyApprovedAnalysis extends GhidraScript {
     require(pop!=null&&pop.getLength()==2&&a.add(2).equals(ins.getAddress())&&tmode(a).equals("1"),"pop not adjacent Thumb "+ins.getAddress());
     require(ins.getLength()==2&&hexBytes(pop.getBytes()).equals(word(0xbc00|(1<<r)))&&hexBytes(ins.getBytes()).equals(word(0x4700|(r<<3))),"pop/BX opcode mismatch "+ins.getAddress());
   }
+  private void checkCallVia(JsonObject source,JsonObject previous,Instruction ins,JsonObject call)throws Exception {
+    String register=call.get("register").getAsString();
+    require(source!=null&&previous!=null&&("bx "+register).equals(source.get("source").getAsString())&&
+      "mov r12, pc".equals(previous.get("source").getAsString()),"plan .call_via source mismatch "+ins.getAddress());
+    Address move=toAddr(call.get("move").getAsString());Instruction moveIns=getInstructionAt(move);
+    require(move.add(2).equals(ins.getAddress())&&moveIns!=null&&moveIns.getLength()==2&&
+      "movr12,pc".equals(moveIns.toString().replace(" ",""))&&hexBytes(moveIns.getBytes()).equals("fc46"),
+      "invalid .call_via link setup "+ins.getAddress());
+    int r=register.equals("sp")?13:register.equals("lr")?14:Integer.parseInt(register.substring(1));
+    require(ins.getLength()==2&&hexBytes(ins.getBytes()).equals(word(0x4700|(r<<3))),".call_via BX opcode mismatch "+ins.getAddress());
+  }
   private Map<String,List<String>> functions(){Map<String,List<String>> result=new TreeMap<>();FunctionIterator it=currentProgram.getFunctionManager().getFunctions(true);while(it.hasNext()){Function f=it.next();result.put(hex(f.getEntryPoint()),Arrays.asList(f.getName(),new AddressSet(f.getBody()).toString(),f.getSignature().toString(),f.getSignatureSource().toString(),String.valueOf(f.getCallingConventionName()),String.valueOf(f.getStackPurgeSize())));}return result;}
   private Map<Address,String> data(){Map<Address,String> result=new TreeMap<>();DataIterator it=currentProgram.getListing().getDefinedData(true);while(it.hasNext()){Data d=it.next();result.put(d.getAddress(),d.getLength()+":"+d.getDataType().getPathName());}return result;}
   private long number(JsonElement e){String s=e.getAsString();return s.startsWith("0x")?Long.parseUnsignedLong(s.substring(2),16):Long.parseLong(s);}
   private List<String> strings(JsonArray values){List<String> result=new ArrayList<>();for(JsonElement value:values)result.add(value.getAsString());return result;}
   private List<String> pcode(Instruction i,boolean overrides){List<String> result=new ArrayList<>();for(PcodeOp op:i.getPcode(overrides))result.add(op.toString());return result;}
   private List<String> returnPcode(List<String> raw){List<String> result=new ArrayList<>(raw);require(!result.isEmpty(),"empty P-code");int n=result.size()-1;require(result.get(n).contains("BRANCHIND"),"missing raw branch");result.set(n,result.get(n).replace("BRANCHIND","RETURN"));return result;}
+  private List<String> callPcode(List<String> raw){List<String> result=new ArrayList<>(raw);require(!result.isEmpty(),"empty P-code");int n=result.size()-1;require(result.get(n).contains("BRANCHIND"),"missing raw branch");result.set(n,result.get(n).replace("BRANCHIND","CALLIND"));return result;}
   private String tmode(Address a){Register r=currentProgram.getProgramContext().getRegister("TMode");require(r!=null,"missing TMode");BigInteger v=currentProgram.getProgramContext().getValue(r,a,false);return v==null?"unset":v.toString();}
   private String word(int value){return hexBytes(new byte[]{(byte)value,(byte)(value>>>8)});}
   private String hexBytes(byte[] b){return HexFormat.of().formatHex(b);}

@@ -1,0 +1,68 @@
+{
+  "verified": true,
+  "created": 8,
+  "before_functions": 2606,
+  "after_functions": 2614,
+  "added_instructions": 85,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "reopened_state_identical": true,
+  "targets": [
+    {
+      "address": "0x8000888",
+      "name": "Func_888",
+      "body_bytes": 20,
+      "instructions": 5,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x800089c",
+      "name": "Func_89c",
+      "body_bytes": 16,
+      "instructions": 4,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x80008d4",
+      "name": "Func_8d4",
+      "body_bytes": 4,
+      "instructions": 1,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x8000948",
+      "name": "Func_948",
+      "body_bytes": 60,
+      "instructions": 15,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x8000984",
+      "name": "Func_984",
+      "body_bytes": 60,
+      "instructions": 15,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x8000b50",
+      "name": "Func_b50",
+      "body_bytes": 16,
+      "instructions": 4,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x8000b60",
+      "name": "Func_b60",
+      "body_bytes": 12,
+      "instructions": 3,
+      "arm_bytes_match_rom": true
+    },
+    {
+      "address": "0x8000d30",
+      "name": "Func_d30",
+      "body_bytes": 152,
+      "instructions": 38,
+      "arm_bytes_match_rom": true
+    }
+  ]
+}

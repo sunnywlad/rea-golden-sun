@@ -1,0 +1,183 @@
+{
+  "schema": "approved-thumb-analysis-v2",
+  "plan_sha256": "0763cf28f83fb3bf96757621d95186caf1f44ace053b528044563f15656129c1",
+  "targets": 5,
+  "returns": [
+    {
+      "address": "0x8026e70",
+      "entry": "0x8026080",
+      "override": "RETURN",
+      "bytes": "0847",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x24, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x24, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x24, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x24, 4) , (const, 0xfffffffe, 4)",
+        " ---  RETURN (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x8094aa6",
+      "entry": "0x80949a8",
+      "override": "RETURN",
+      "bytes": "0047",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  RETURN (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x80a4466",
+      "entry": "0x80a414c",
+      "override": "RETURN",
+      "bytes": "0847",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x24, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x24, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x24, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x24, 4) , (const, 0xfffffffe, 4)",
+        " ---  RETURN (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x80a4d9a",
+      "entry": "0x80a4924",
+      "override": "RETURN",
+      "bytes": "0047",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  RETURN (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x80f3776",
+      "entry": "0x80f3078",
+      "override": "RETURN",
+      "bytes": "0047",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x20, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x20, 4) , (const, 0xfffffffe, 4)",
+        " ---  RETURN (register, 0x5c, 4)"
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "address": "0x80f366a",
+      "entry": "0x80f3078",
+      "override": "CALL",
+      "bytes": "1847",
+      "register": "r3",
+      "move": "0x80f3668",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  CALLIND (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x80f367e",
+      "entry": "0x80f3078",
+      "override": "CALL",
+      "bytes": "1847",
+      "register": "r3",
+      "move": "0x80f367c",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  CALLIND (register, 0x5c, 4)"
+      ]
+    },
+    {
+      "address": "0x80f3692",
+      "entry": "0x80f3078",
+      "override": "CALL",
+      "bytes": "1847",
+      "register": "r3",
+      "move": "0x80f3690",
+      "tmode": "1",
+      "raw_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  BRANCHIND (register, 0x5c, 4)"
+      ],
+      "effective_pcode": [
+        "(unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)",
+        "(register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)",
+        " ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)",
+        "(register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)",
+        " ---  CALLIND (register, 0x5c, 4)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "created": 2,
+  "before_functions": 2604,
+  "after_functions": 2606,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "reopened_state_identical": true,
+  "targets": [
+    {
+      "name": "Func_404",
+      "body_bytes": 588,
+      "instructions": 147,
+      "tmode": "ARM",
+      "instruction_bytes_match_rom": true
+    },
+    {
+      "name": "Func_20f4",
+      "body_bytes": 208,
+      "instructions": 52,
+      "tmode": "ARM",
+      "instruction_bytes_match_rom": true
+    }
+  ]
+}

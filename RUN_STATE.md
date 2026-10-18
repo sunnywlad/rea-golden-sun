@@ -59,7 +59,7 @@ Claude Bridge default prend en charge les questions, Notion et les mémoires. Co
 ## Projet validé
 
 `work/ghidra_thumb_special_pair_scoped/step9.gpr`, programme `gs_us_map.elf`.
-**2 593 fonctions ; 2 223/2 253 entrées ROM reconnues, soit 98,67 % ; 30 entrées absentes.**
+**Baseline conservée : 2 593 fonctions ; 2 223/2 253 entrées ROM reconnues, soit 98,67 % ; 30 entrées absentes au début de l'étape 34.**
 Rapport `work/step26.md`, preuve `work/thumb_special_pair_scoped_verification.json`, inventaire `work/step26_remaining.json`.
 Projet sauvegardé, fermé, rouvert et contrôlé. Second passage idempotent : snapshots, cibles, pools et C identiques. Tous les processus Ghidra de cette reprise sont terminés.
 
@@ -81,7 +81,9 @@ Le lot tampon/VRAM/palette/miroir est terminé à l'étape 29. Prochain lot à c
 
 Références externes auditées : `external/alchemy/` et `external/game-tools-collection/`, clones partiels à historique court, sans modifications locales, commits initiaux conservés. Voir `external/README.md` et `work/external_references.json` pour les révisions et le sparse. L'éditeur est celui de RyudoSynbios, distinct d'Atrius. Le SHA1 anglais publié par Alchemy correspond à notre ROM ; son build complet annoncé reste non vérifié. Aucun sous-module, dépendance ou build externe lancé. Unicorn 2.1.4 est disponible dans le cache uv pour le banc local.
 
-Restent 12 Thumb ROM ordinaires, 2 ARM ROM (Func_404 et Func_20f4), 12 entrées de stockage rom_770 exécutées en IWRAM et 4 cas code/donnée. Détail nominatif dans `work/step26_remaining.json`. Les douze Thumb demandent encore le traitement de macros .call_via, d'opérations explicites sur PC, d'un cas Thumb/ARM mixte et d'un appel vers un label dans un autre corps. Aucun prochain lot choisi ou préparé par mutation Ghidra.
+Étape 34 terminée : les 30 entrées ont été récupérées dans le candidat cumulatif `work/ghidra_step34_runtime_arm_scoped/step9.gpr`. Le candidat a été fermé, rouvert et comparé à la baseline retenue `work/ghidra_thumb_special_pair_scoped/step9.gpr`, qui reste intacte ; le candidat n'a pas été promu. Résultat : 2 593 à 2 623 fonctions, 5 239 instructions ajoutées, 142 unités de données ajoutées et quatre unités `undefined2` source-confirmées remplacées. La ROM, les permissions mémoire, les fonctions et instructions préexistantes sont inchangées. Voir `work/step34.md` et `work/step34_aggregate_verification.json`.
+
+Les 30 fonctions sont nommées dans `work/step34_all_targets.tsv`. Les rapports des lots sont dans `work/step34_*_verification.json`. Les fonctions copiées par DMA dans des buffers runtime restent hors de cette étape et sont listées dans `work/step34.md`.
 
 Les appels de code copié par DMA restent à reconstruire dans leurs buffers runtime : notamment Func_9bb8, Func_55d8 copiant Func_20f4 vers la pile, Func_d304 copiant Func_a494 vers un bloc alloué. Le rappel ci-dessus mesure les entrées de stockage ROM.
 

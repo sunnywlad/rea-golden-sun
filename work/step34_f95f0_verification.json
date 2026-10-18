@@ -1,0 +1,22 @@
+{
+  "verified": true,
+  "created": 1,
+  "before_functions": 2603,
+  "after_functions": 2604,
+  "added_instructions": 51,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "approved_literal_slots": 6,
+  "new_literal_data_units": 6,
+  "targets": [
+    {
+      "name": "Func_f95f0",
+      "body_bytes": 106,
+      "instructions": 51,
+      "warnings": 2
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}

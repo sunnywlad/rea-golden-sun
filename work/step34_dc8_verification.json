@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "before_functions": 2622,
+  "after_functions": 2623,
+  "created_functions": [
+    "0x8000dc8"
+  ],
+  "code_bytes": 1924,
+  "instructions": 533,
+  "mode_segments": 8,
+  "all_source_mode_ranges_and_rom_bytes_match": true,
+  "memory_functions_instructions_and_data_unchanged": true,
+  "reopened_snapshot_identical": true,
+  "caveat": "Source literal and data islands, including 0x08001568..0x08001af7, are outside the code body; C semantic equivalence is not claimed."
+}

@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "before_functions": 2621,
+  "after_functions": 2622,
+  "created_functions": [
+    "0x80f9674"
+  ],
+  "code_bytes": 920,
+  "instructions": 317,
+  "mode_segments": 7,
+  "all_mode_ranges_match_source_and_instruction_bytes_match_pinned_rom": true,
+  "memory_functions_instructions_and_data_before_unchanged": true,
+  "reopened_snapshot_identical": true,
+  "caveat": "Source alignment fill and the final literal word are excluded; C semantic equivalence is not claimed."
+}

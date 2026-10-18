@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "created": 5,
+  "before_functions": 2593,
+  "after_functions": 2598,
+  "added_instructions": 3290,
+  "memory_unchanged": true,
+  "old_functions_instructions_and_data_unchanged": true,
+  "new_code_matches_source_addresses_lengths_bytes": true,
+  "reopened_state_and_c_identical": true,
+  "approved_literal_slots": 118,
+  "new_literal_data_units": 118,
+  "targets": [
+    {
+      "name": "Func_26080",
+      "body_bytes": 3308,
+      "instructions": 1585,
+      "warnings": 2
+    },
+    {
+      "name": "Func_949a8",
+      "body_bytes": 208,
+      "instructions": 97,
+      "warnings": 2
+    },
+    {
+      "name": "Func_a414c",
+      "body_bytes": 772,
+      "instructions": 348,
+      "warnings": 0
+    },
+    {
+      "name": "Func_a4924",
+      "body_bytes": 976,
+      "instructions": 457,
+      "warnings": 1
+    },
+    {
+      "name": "Func_f3078",
+      "body_bytes": 1664,
+      "instructions": 803,
+      "warnings": 0
+    }
+  ],
+  "caveat": "guided recovery; source control flow verified, C semantic equivalence not established"
+}

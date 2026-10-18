@@ -1,8 +1,10 @@
+import com.google.gson.*;
 import ghidra.app.cmd.disassemble.ArmDisassembleCommand;
 import ghidra.app.cmd.function.CreateFunctionCmd;
 import ghidra.app.decompiler.*;
 import ghidra.app.script.GhidraScript;
 import ghidra.program.model.address.*;
+import ghidra.program.model.listing.FlowOverride;
 import ghidra.program.model.lang.Register;
 import ghidra.program.model.listing.*;
 import ghidra.program.model.symbol.SourceType;
@@ -19,7 +21,19 @@ public class RecoverThumb extends GhidraScript {
   private final TreeSet<Address> repoStarts = new TreeSet<Address>();
   private static final class Target {
     final Address address; final String name;
+    final List<CallVia> callVia = new ArrayList<CallVia>();
+    final AddressSet expectedBody = new AddressSet();
+    final Map<Address, PlannedInstruction> plannedInstructions = new TreeMap<Address, PlannedInstruction>();
+    boolean hasPlan = false, manualBody = false;
     Target(Address a, String n) { address = a; name = n; }
+  }
+  private static final class CallVia {
+    final Address move, bx; final String register;
+    CallVia(Address m, Address b, String r) { move = m; bx = b; register = r; }
+  }
+  private static final class PlannedInstruction {
+    final int length; final String bytes;
+    PlannedInstruction(int l, String b) { length = l; bytes = b; }
   }
   private static final class Result {
     final String address, name;
@@ -32,10 +46,11 @@ public class RecoverThumb extends GhidraScript {
 
   @Override public void run() throws Exception {
     String[] args = getScriptArgs();
-    if (args.length != 3) throw new IllegalArgumentException("usage: RecoverThumb.java targets.tsv all-repo-boundaries.tsv output-directory");
+    if (args.length != 3 && args.length != 4) throw new IllegalArgumentException("usage: RecoverThumb.java targets.tsv all-repo-boundaries.tsv output-directory [approved-plan.json]");
     Path out = Paths.get(args[2]); Files.createDirectories(out);
     readTargets(Paths.get(args[0]));
     readBoundaries(Paths.get(args[1]));
+    if (args.length == 4) readPlan(Paths.get(args[3]));
     exportProcedures(out.resolve("before.json"));
     List<Result> results = new ArrayList<Result>();
     for (Target t : targets) {
@@ -76,6 +91,39 @@ public class RecoverThumb extends GhidraScript {
     if (repoStarts.isEmpty()) throw new IOException("repo boundaries TSV is empty");
   }
 
+  private void readPlan(Path path) throws Exception {
+    JsonObject root = JsonParser.parseString(Files.readString(path, StandardCharsets.UTF_8)).getAsJsonObject();
+    Map<String, Target> byEntry = new HashMap<String, Target>();
+    for (Target t : targets) byEntry.put(hex(t.address), t);
+    for (JsonElement element : root.getAsJsonArray("targets")) {
+      JsonObject row = element.getAsJsonObject();
+      String address = row.get("address").getAsString();
+      Target t = byEntry.get(address);
+      if (t == null || !t.name.equals(row.get("name").getAsString()))
+        throw new IOException("approved plan does not match target TSV at " + address);
+      t.hasPlan = true;
+      t.manualBody = row.has("computed_branches") && row.getAsJsonArray("computed_branches").size() > 0;
+      for (JsonElement rangeElement : row.getAsJsonArray("body_ranges")) {
+        JsonObject range = rangeElement.getAsJsonObject();
+        t.expectedBody.add(toAddr(range.get("start").getAsString()), toAddr(range.get("end").getAsString()));
+      }
+      for (JsonElement instructionElement : row.getAsJsonArray("instructions")) {
+        JsonObject instruction = instructionElement.getAsJsonObject();
+        Address a = toAddr(instruction.get("address").getAsString());
+        t.plannedInstructions.put(a, new PlannedInstruction(instruction.get("length").getAsInt(),
+            instruction.get("bytes").getAsString().toLowerCase(Locale.ROOT)));
+      }
+      JsonArray calls = row.has("call_via_calls") ? row.getAsJsonArray("call_via_calls") : new JsonArray();
+      for (JsonElement callElement : calls) {
+        JsonObject call = callElement.getAsJsonObject();
+        t.callVia.add(new CallVia(toAddr(call.get("move").getAsString()),
+            toAddr(call.get("bx").getAsString()), call.get("register").getAsString()));
+      }
+    }
+    for (Target t : targets) if (!t.hasPlan)
+      throw new IOException("target has no approved plan row: " + hex(t.address));
+  }
+
   private Result recover(Target t, Path out) throws Exception {
     Result r = new Result(t);
     FunctionManager fm = currentProgram.getFunctionManager();
@@ -114,6 +162,7 @@ public class RecoverThumb extends GhidraScript {
     AddressSet restricted = new AddressSet(t.address, end);
     boolean changesMayRemain = false;
     try {
+      if (t.hasPlan) verifyPlannedBytes(t);
       Register tm = currentProgram.getProgramContext().getRegister("TMode");
       if (tm == null) throw new IllegalStateException("program has no TMode register");
       BigInteger currentTMode = currentProgram.getProgramContext().getValue(tm, t.address, false);
@@ -122,7 +171,25 @@ public class RecoverThumb extends GhidraScript {
         changesMayRemain = true;
       }
       Instruction atEntry = listing.getInstructionAt(t.address);
-      if (atEntry == null) {
+      if (t.manualBody) {
+        for (Map.Entry<Address, PlannedInstruction> entry : t.plannedInstructions.entrySet()) {
+          Address a = entry.getKey(); PlannedInstruction p = entry.getValue();
+          Instruction existing = listing.getInstructionAt(a);
+          if (existing != null && (existing.getLength() != p.length || !hexBytes(existing.getBytes()).equals(p.bytes))) {
+            r.status = "planned_instruction_conflict"; r.detail = "existing instruction differs at " + hex(a); throw new Failure();
+          }
+          if (existing == null) {
+            Address endInstruction = a.add(p.length - 1);
+            ArmDisassembleCommand cmd = new ArmDisassembleCommand(a, new AddressSet(a, endInstruction), true);
+            cmd.enableCodeAnalysis(false);
+            changesMayRemain = true;
+            if (!cmd.applyTo(currentProgram, monitor)) {
+              r.status = "disassembly_failed"; r.detail = "planned instruction failed at " + hex(a) + ": " + cmd.getStatusMsg(); throw new Failure();
+            }
+          }
+        }
+        r.disassembled = true;
+      } else if (atEntry == null) {
         ArmDisassembleCommand cmd = new ArmDisassembleCommand(t.address, restricted, true);
         cmd.enableCodeAnalysis(false); // postscript must not launch a full or incremental analysis pass
         changesMayRemain = true; // disassembly can make partial progress even when it returns false
@@ -137,7 +204,28 @@ public class RecoverThumb extends GhidraScript {
         r.disassembled = true;
         r.detail = "reused predecoded entry instruction";
       }
-      AddressSetView body = CreateFunctionCmd.getFunctionBody(currentProgram, t.address, false, monitor);
+      for (CallVia call : t.callVia) {
+        Instruction move = listing.getInstructionAt(call.move);
+        Instruction bx = listing.getInstructionAt(call.bx);
+        String expectedBx = call.register.equals("sp") ? "bx sp" : call.register.equals("lr") ? "bx lr" : "bx " + call.register;
+        int reg = call.register.equals("sp") ? 13 : call.register.equals("lr") ? 14 : Integer.parseInt(call.register.substring(1));
+        if (move == null || bx == null || !move.toString().toLowerCase(Locale.ROOT).replace(" ", "").equals("movr12,pc") ||
+            !bx.toString().toLowerCase(Locale.ROOT).replace(" ", "").equals(expectedBx.replace(" ", "")) ||
+            !hexBytes(move.getBytes()).equals("fc46") || !hexBytes(bx.getBytes()).equals(String.format(Locale.ROOT, "%02x%02x", (0x4700 | reg << 3) & 0xff, (0x4700 | reg << 3) >>> 8))) {
+          r.status = "call_via_site_mismatch"; r.detail = "planned macro expansion differs at " + hex(call.bx); throw new Failure();
+        }
+        changesMayRemain = true;
+        bx.setFlowOverride(FlowOverride.CALL);
+        Address continuation = bx.getFallThrough();
+        if (continuation == null || !restricted.contains(continuation)) {
+          r.status = "call_via_continuation_out_of_bounds"; r.detail = "macro call continuation escapes target interval at " + hex(call.bx); throw new Failure();
+        }
+        ArmDisassembleCommand continuationCmd = new ArmDisassembleCommand(continuation, restricted, true);
+        continuationCmd.enableCodeAnalysis(false);
+        continuationCmd.applyTo(currentProgram, monitor);
+      }
+      if (t.hasPlan) verifyPlannedInstructions(t);
+      AddressSetView body = t.manualBody ? t.expectedBody : CreateFunctionCmd.getFunctionBody(currentProgram, t.address, false, monitor);
       r.bodySize = body.getNumAddresses();
       if (body.isEmpty() || !body.contains(t.address)) {
         r.status = "empty_body"; r.detail = "Ghidra flow analysis returned no body at entry"; throw new Failure();
@@ -145,9 +233,12 @@ public class RecoverThumb extends GhidraScript {
       AddressSet outside = new AddressSet(body);
       outside.delete(restricted);
       AddressSet boundedBody = new AddressSet(body).intersect(restricted);
+      if (t.hasPlan && !t.manualBody && !boundedBody.equals(t.expectedBody)) {
+        r.status = "planned_body_mismatch"; r.detail = "Ghidra flow body differs from approved source layout"; throw new Failure();
+      }
       // Check every outgoing edge even when an undefined destination contributes no body bytes.
       TreeSet<Address> tailDestinations = new TreeSet<Address>();
-      String invalidTail = validateTailBranches(boundedBody, restricted, outside, tailDestinations);
+      String invalidTail = t.manualBody ? null : validateTailBranches(boundedBody, restricted, outside, tailDestinations);
       if (invalidTail != null) {
         r.status = "body_crosses_boundary";
         r.detail = "Ghidra flow body has an invalid external edge: " + invalidTail;
@@ -180,6 +271,22 @@ public class RecoverThumb extends GhidraScript {
       decompile(created, out, r, t);
     } else r.tmode = tmodeAt(t.address);
     return r;
+  }
+
+  private void verifyPlannedBytes(Target t) throws Exception {
+    for (Map.Entry<Address, PlannedInstruction> entry : t.plannedInstructions.entrySet()) {
+      PlannedInstruction p = entry.getValue(); byte[] actual = new byte[p.length];
+      if (currentProgram.getMemory().getBytes(entry.getKey(), actual) != p.length || !hexBytes(actual).equals(p.bytes))
+        throw new IllegalStateException("approved ROM bytes mismatch at " + hex(entry.getKey()));
+    }
+  }
+
+  private void verifyPlannedInstructions(Target t) throws Exception {
+    for (Map.Entry<Address, PlannedInstruction> entry : t.plannedInstructions.entrySet()) {
+      PlannedInstruction p = entry.getValue(); Instruction actual = currentProgram.getListing().getInstructionAt(entry.getKey());
+      if (actual == null || actual.getLength() != p.length || !hexBytes(actual.getBytes()).equals(p.bytes))
+        throw new IllegalStateException("disassembled instruction differs from approved plan at " + hex(entry.getKey()));
+    }
   }
 
   /** Limit disassembly and accepted CFG body to the next repository or existing function entry. */
@@ -327,6 +434,7 @@ public class RecoverThumb extends GhidraScript {
 
   private static String stem(Target t) { return String.format(Locale.ROOT, "%08x_%s", t.address.getOffset(), t.name.replaceAll("[^A-Za-z0-9_.-]", "_")); }
   private static String hex(Address a) { return "0x" + Long.toHexString(a.getOffset()); }
+  private static String hexBytes(byte[] bytes) { StringBuilder b = new StringBuilder(); for (byte x : bytes) b.append(String.format(Locale.ROOT, "%02x", x & 0xff)); return b.toString(); }
   private static String addresses(Set<Address> a) { StringBuilder b = new StringBuilder(); for (Address x : a) { if (b.length() > 0) b.append(","); b.append(hex(x)); } return b.toString(); }
   private static String nonempty(String a, String b) { return a != null && !a.isEmpty() ? a : (b == null ? "" : b); }
   private static String json(String s) {
